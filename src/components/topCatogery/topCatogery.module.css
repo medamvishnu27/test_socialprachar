@@ -1,0 +1,40 @@
+.TopCategoryCenterText{
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.topCategory  .topCategoryBox{
+    padding: 40px 20px 40px 20px ;
+    background-color:white;
+    border: 1px solid gray;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 200px;
+  }
+  .topCategory  .topCategoryBox:hover{
+    border: #553cdf 1px solid;
+  }
+  
+  .topCategoryBox img{
+  
+    width: 50px;
+    height: 50px ;
+    border-radius: 5px;
+    
+  }
+  .topCategoryBoxText span{
+    text-align: center;
+    display: block;
+  }
+  .topCategoryBoxText .FirstText{
+    font-size: 19px;
+    font-weight: 600;
+    margin-top: 20px;
+  }
+  .topCategoryBoxText .SecondText{
+    color: #777777;
+  }
+

@@ -1,0 +1,43 @@
+/** @format */
+
+.card_adobe {
+  background: #002d68;
+  color: white;
+}
+ /* .card_adobe {
+  background: #7a6ad544;
+  color: black;
+} */
+.card_photoshop {
+  background: #421461;
+  color: white;
+}
+.card_illustrator {
+  background: #335300;
+  color: white;
+}
+.card_acrobat {
+  background: #004d3f;
+  color: white;
+}
+.card_premiere {
+  background: #1a1a1a;
+  color: #ffffff;
+}
+
+.active_btn {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.active_btn::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 50%;
+  width: 80%; /* Adjust width as needed */
+  height: 3px; /* Thickness of the underline */
+  background-color: #ff5003; 
+  transform: translateX(-50%);
+}

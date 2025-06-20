@@ -1,0 +1,10 @@
+/** @format */
+
+.button {
+  width: 100%;
+  border-radius: 50px;
+  font-size: 18px;
+  color: black;
+  background:  #ffd702;
+  /* background: #4941e1; */
+}

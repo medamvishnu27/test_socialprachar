@@ -1,0 +1,25 @@
+/* .banner_container {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  border-top:5px solid #2caa66;
+  background-color: #071e23;
+  color: white;
+  z-index: 1000;
+  border-radius: 35px 35px 0 0 ;
+} */
+
+.banner_container {
+    height: 80px;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f9fa;
+}
+
+.bannerText{
+    font-size:34px;
+    font-weight: 600;
+    color: #2caa66;
+}

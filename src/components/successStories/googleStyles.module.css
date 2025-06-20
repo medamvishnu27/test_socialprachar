@@ -1,0 +1,172 @@
+/** @format */
+
+.google {
+  background-color: #543cdf23;
+  /* height: 100vh; */
+}
+.HeadingGoogleLogo {
+  width: 35px;
+  height: 35px;
+  display: inline-flex;
+  margin-left: 15px;
+  margin-bottom: 10px;
+}
+.HeadingLinkedinLogo {
+  width: 40px;
+  height: 40px;
+  display: inline;
+  margin-left: 15px;
+  margin-bottom: 10px;
+}
+.HeadingJustDialLogo {
+  width: 100px;
+  height: auto;
+  margin-left: 15px;
+  margin-bottom: 10px;
+}
+
+.header {
+  padding-top: 50px;
+  font-size: 40px;
+  font-weight: 600;
+  color: #342489;
+}
+
+.googleCard {
+  border-radius: 18px;
+  padding: 30px 15px 0px;
+}
+
+.insideGoogleCard {
+  max-height: 350px;
+  overflow-y: hidden;
+  padding: 10px;
+  border-radius: 12px;
+  border: 2px solid #553cdf;
+  box-shadow: 2px 8px 16px rgba(84, 60, 223, 0.454);
+}
+.iconStart {
+  position: absolute;
+  top: 15px;
+  left: 35px;
+}
+.iconEnd {
+  position: absolute;
+  right: 50px;
+}
+.card {
+  font-size: 15px;
+  padding: 20px 5px 50px;
+  overflow: hidden;
+}
+.card p {
+  text-align: center;
+  font-size: 14px;
+}
+
+.googleLogo {
+  width: 25px;
+  height: 25px;
+}
+.googleCommentPerson {
+  position: relative;
+  top: -50px;
+}
+
+.wholeGoogleCard::-webkit-scrollbar {
+  display: none;
+}
+
+.profileImage {
+  width: 50px;
+  height: 50px;
+  border: 2px solid #553cdf;
+}
+
+@media (max-width: 376px) {
+  .googleCard {
+    height: 75vh !important;
+  }
+  .profileImage {
+    width: 35px;
+    height: 35px;
+    border: 2px solid #553cdf;
+  }
+  .card p {
+    font-size: 10px;
+  }
+  .googleLogo {
+    width: 18px;
+    height: 18px;
+  }
+  .name {
+    font-size: 14px;
+  }
+  .iconEnd {
+    position: absolute;
+    top: 270px;
+  }
+}
+@media (min-width: 377px) and (max-width: 575px) {
+  .card p {
+    font-size: 10px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .profileImage {
+    width: 35px;
+    height: 35px;
+    border: 2px solid #553cdf;
+  }
+  .card p {
+    font-size: 12px;
+  }
+  .googleLogo {
+    width: 18px;
+    height: 18px;
+  }
+  .name {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 920px) {
+  .card p {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 921px) and (max-width: 1250px) {
+  .card p {
+    font-size: 12px;
+  }
+  .profileImage {
+    width: 40px;
+    height: 40px;
+  }
+  .wholeGoogleCard {
+    height: 80vh !important;
+  }
+  .iconEnd {
+    position: absolute;
+    bottom: 150px;
+  }
+}
+
+@media (min-width: 1251px) {
+  .googleCard {
+    padding: 30px 15px;
+  }
+  .card p {
+    font-size: 14px;
+  }
+  .profileImage {
+    width: 50px;
+    height: 50px;
+  }
+  .googleLogo {
+    width: 25px;
+    height: 25px;
+  }
+}

@@ -1,0 +1,13 @@
+/** @format */
+
+.icon {
+  border-radius: 8px;
+  width: 50px;
+  height: 50px;
+  background: #fffdfd;
+}
+
+.rating{
+  border-radius: 8px;
+  background-color: #f5f5f5;
+}

@@ -1,0 +1,39 @@
+.courseCard {
+    width: 100%;
+    border: none;
+    box-shadow: none;
+}
+
+.checkIcon {
+    color: #8e44ad;
+    margin-right: 10px;
+}
+
+.checkIcon::before {
+    content: '\2714';
+    font-weight: bold;
+}
+
+.verticalLine {
+    border-left: 1px solid #ccc;
+    height: auto;
+}
+
+.btn-outline-primary {
+    color: #8e44ad;
+    border-color: #8e44ad;
+}
+
+.btn-outline-primary:hover {
+    background-color: #8e44ad;
+    color: #fff;
+}
+
+.downloadRoadMap{
+    border: 2px solid #553cdf !important;
+}
+
+.downloadRoadMap:hover{
+    color: white !important;
+    background: #553cdf !important;
+}

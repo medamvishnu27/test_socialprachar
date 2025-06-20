@@ -1,0 +1,27 @@
+/** @format */
+
+.WhatWillYouGet {
+  background: #090820;
+}
+.pointer {
+  text-align: start;
+  font-size: 18px;
+  background: rgba(255, 255, 255, 0.11);
+}
+.comments {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.commentsContainer {
+  width: 70%;
+}
+
+@media (max-width: 376px) {
+  .commentsContainer {
+    width: 100%;
+  }
+}

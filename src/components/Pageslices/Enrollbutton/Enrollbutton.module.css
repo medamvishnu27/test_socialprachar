@@ -1,0 +1,68 @@
+/** @format */
+
+.Enrollbutton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shinebtn:hover {
+  background-color: #35258f;
+}
+
+.shinebtn {
+  position: relative;
+  padding: 12px 30px;
+  height: auto;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #553cdf;
+  border: none;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+
+.shinebtn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 30%;
+  height: 100%; 
+  background: linear-gradient(
+    90deg,
+    #ffffff13 0%,
+    #ffffffd7 50%,
+    #ffffff13 100%
+  );
+  transform: skewX(-20deg);
+  animation: shine 1.5s linear infinite;
+}
+
+@keyframes shine {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@media(min-width:1025px) and (max-width: 1200px) {
+  .shinebtn {
+    padding: 14px 40px;
+    font-size: 18px;
+  }
+}
+
+@media(max-width:376px){
+  .shinebtn{
+    width: 100%!;
+    padding: 6px 6px;
+    font-size: 16px;  
+  }
+}

@@ -1,0 +1,104 @@
+/* FAQ Container */
+.faqContainer {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Individual FAQ Item */
+.faqItem {
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* FAQ Question Button */
+.faqQuestion {
+    width: 100%;
+    padding: 1.25rem;
+    background-color: #f8f9fa;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.faqQuestion:hover {
+    background-color: #e9ecef;
+}
+
+.faqQuestion.active {
+    background-color: #e9ecef;
+    color: #0d6efd;
+}
+
+/* Question Text */
+.questionText {
+    flex: 1;
+    margin-right: 1rem;
+}
+
+/* Chevron Icon */
+.chevronIcon {
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+    color: #6c757d;
+}
+
+.faqQuestion.active .chevronIcon {
+    color: #0d6efd;
+}
+
+/* FAQ Answer Container */
+.faqAnswer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background-color: #fff;
+}
+
+.faqAnswer.show {
+    max-height: 500px; /* Adjust based on your content */
+    transition: max-height 0.3s ease-in;
+}
+
+/* Answer Content */
+.answerContent {
+    padding: 1.25rem;
+    border-top: 1px solid #e9ecef;
+}
+
+.answerContent p {
+    margin: 0;
+    line-height: 1.6;
+    color: #495057;
+    white-space: pre-line; /* Preserves line breaks */
+}
+
+/* Contact Section */
+.contact {
+    background-color: #f8f9fa;
+    padding: 2rem 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .faqQuestion {
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .answerContent {
+        padding: 1rem;
+    }
+    
+    .questionText {
+        margin-right: 0.5rem;
+    }
+}

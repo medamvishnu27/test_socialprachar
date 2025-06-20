@@ -1,0 +1,44 @@
+.form{
+    border: 2px solid #543cdf67;
+    border-radius: 15px;
+    padding: 15px;
+    max-width: 350px;
+}
+.detailsContainer{
+    min-height: 485px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.infoAboutUser{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+.infoAboutUser img{
+    width: 100%;
+    height: auto;
+}
+.para{
+    font-size: 24px;
+    color: #221859;
+    text-align: center;
+    font-weight: 500;
+}
+.inputDivs{
+    margin-bottom: 20px;
+    max-width: 320px;
+}
+.submitBtn{
+    background-color: #553cdf;
+    border-radius: 5px;
+    color: white;
+    margin-left: 10px;
+}
+.submitBtn:hover{
+    border:#553cdf solid 1px;
+    background-color: white;
+    color: #553cdf;
+}
+

@@ -1,0 +1,15 @@
+.BulbTextStyle{
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+.ImagesSize img{
+  width: 200px;
+}
+
+.marquee {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+

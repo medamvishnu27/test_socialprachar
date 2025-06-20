@@ -1,0 +1,61 @@
+/** @format */
+.container {
+  background: linear-gradient(
+    to bottom,
+    rgb(85, 60, 223) 5%,
+    rgb(255, 255, 255) 10%
+  );
+}
+
+.Title {
+    font-family:'Avant Garde'; 
+    font-weight: bold;
+    text-align: left;
+}
+
+.active_category {
+  border-bottom: 3px solid #007bff !important;
+  font-weight: bold !important;
+}
+
+.custom_image {
+  width: 650px;
+  height: 214px;
+  object-fit: cover;
+}
+
+.sticky_asidecard {
+  position: sticky;
+  top: 100px;
+  background: #fff;
+}
+
+.enrollBtn {
+  color: white;
+  background: linear-gradient(90deg, #553cdf, #3a299a);
+}
+
+.enrollBtn:hover {
+  color: white;
+  border: 1px solid #0048ff;
+  transform: scale(1.05);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.sticky_asidecard {
+  border-radius: 12px;
+}
+
+/* media queries */
+@media (max-width: 376px) {
+  .custom_image {
+    width: 325px;
+    height: 150px;
+    object-fit: contain;
+  }
+  .studentsEnrolledText {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+  }
+}

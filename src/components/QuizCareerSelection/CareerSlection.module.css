@@ -1,0 +1,219 @@
+/** @format */
+
+.QuizStartBtn {
+  background-color: #553cdf;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.QuizStartBtn:hover {
+  background-color: #4c37b3 !important;
+}
+
+.quiz_summary {
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.quiz_title {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #343a40;
+}
+
+.quiz_item {
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.quiz_question {
+  font-size: 1rem;
+  color: #495057;
+  margin-bottom: 0.5rem;
+}
+
+.question_number {
+  font-weight: bold;
+  color: #007bff;
+}
+
+.quiz_answer {
+  font-size: 0.9rem;
+  color: #6c757d;
+  display: flex;
+  flex-direction: column;
+}
+
+.quiz_answer strong {
+  color: #28a745;
+}
+
+.exploreButton {
+  background-color: #4caf50 !important;
+  color: #ffffff !important;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.276);
+}
+
+.exploreButton:hover {
+  background-color: #4cba51 !important;
+  color: white !important;
+  transform: scale(1.05);
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.exploreButton:active {
+  transform: scale(0.98);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.downloadButton {
+  background-color: #5b20c9e7 !important; /* Bright blue for download */
+  color: #ffffff !important;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.downloadButton:hover {
+  background-color: #0056b3; /* Darker blue */
+  transform: scale(1.05); /* Slight zoom effect */
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.306); /* Enhanced shadow */
+}
+
+.downloadButton:active {
+  transform: scale(0.98);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.downloadButton:focus {
+  outline: none;
+  box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.8);
+}
+
+/* slide container */
+.sliderContainer {
+  overflow: hidden;
+  width: 100%;
+}
+
+.questionsWrapper {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.questionSlide {
+  flex: 0 0 100%;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+@media (max-width: 376px) {
+  .options {
+    font-size: 12px !important;
+    margin-right: 15px !important;
+  }
+  .checkBox {
+    width: 25px !important;
+  }
+  .sliderContainer {
+    overflow: hidden;
+    width: 100%;
+  }
+  .questionsWrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+  }
+  .questionSlide {
+    flex: 0 0 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .startButtonList {
+    font-size: 12px;
+    text-align: left !important;
+  }
+  .startButtonpara1 {
+    font-size: 12px;
+  }
+  .startButtonpara2 {
+    font-size: 12px;
+  }
+}
+
+/* Media Query for Mobile */
+@media (max-width: 768px) {
+  .quiz_summary {
+    padding: 0.8rem;
+  }
+
+  .quiz_title {
+    font-size: 1.2rem;
+  }
+
+  .quiz_question {
+    font-size: 0.8rem;
+  }
+
+  .quiz_answer {
+    font-size: 0.7rem;
+  }
+  /* .startButtonList {
+    display: block;
+    margin-left: 0;
+  } */
+}
+
+@media (min-width: 769px) and(max-width:1024px) {
+  .sliderContainer {
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .questionsWrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+  }
+
+  .questionSlide {
+    flex: 0 0 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 1000px) {
+  .startButtonList {
+    display: flex;
+    margin-left: 20%;
+  }
+}

@@ -1,0 +1,308 @@
+/** @format */
+.text-center {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+}
+
+.Mentorpage {
+  padding-top: 35px;
+}
+.background h2 {
+  font-size: 42px;
+  letter-spacing: -0.5px;
+  font-weight: 600;
+  color: black;
+}
+
+.background {
+  position: relative;
+  width: 100%;
+  background-color: #f3f0ff;
+  border-radius: 8px;
+  text-align: center;
+  overflow: hidden;
+}
+.cards {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+/* mentor BIO */
+.mentorInfo {
+  width: 75%;
+  display: flex;
+  margin: 70px auto;
+}
+
+.smallHeading {
+  display: none;
+}
+
+.mentorName {
+  color: black;
+  font-size: 32px;
+  margin: 0;
+}
+
+.mentorProfile {
+  position: relative;
+  text-align: center;
+  width: 50%;
+}
+
+.mentorDetails {
+  background-color: aliceblue;
+  width: 70%;
+  margin: 0 auto;
+  padding: 0 0 5px 30px;
+  text-align: left;
+  border-radius: 0 0 10px 10px;
+}
+
+.mentorSkill {
+  padding-top: 20px;
+  margin: 0;
+}
+.mentorSkill img {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+.mentorBio {
+  width: 50%;
+}
+
+.profileImage {
+  width: 70%;
+  height: 80vh;
+  border-radius: 15px 15px 0 0;
+}
+
+.prevButton,
+.nextButton {
+  position: absolute;
+  top: 35%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  padding: 10px 20px;
+  /* color: white;/ */
+  background-color: rgba(0, 0, 0, 0.194);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.prevButton {
+  left: 15%;
+}
+
+.nextButton {
+  right: 15%;
+}
+
+.prevButton:hover,
+.nextButton:hover {
+  background-color: rgba(0, 0, 0, 0.26);
+}
+
+/* mentor stats */
+.mentorStats {
+  display: flex;
+  gap: 20px;
+}
+
+.statItem {
+  width: 350px;
+  height: 150px;
+  text-align: center;
+  padding: 20px 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  text-align: start;
+}
+
+.statIcon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 8px;
+}
+
+.statItem p:first-of-type {
+  font-size: 28px;
+  font-weight: bold;
+  color: black;
+}
+
+.statItem p:last-of-type {
+  font-size: 20px;
+  color: #797773;
+  margin-top: -25px;
+}
+
+/* featured in */
+.featured {
+  margin: 35px 0;
+  width: 100%;
+  height: 150px;
+  border-radius: 15px;
+  border: 1px solid rgba(0, 0, 255, 0.178);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.featuredHeading {
+  position: relative;
+  top: 32px;
+  font-size: 26px;
+  font-weight: 600;
+}
+.featuredImage {
+  width: 100%;
+}
+.bioTitle {
+  font-size: 42px;
+  color: black;
+  font-weight: 600;
+}
+/* media queries */
+@media (max-width: 376px) {
+  .background h2 {
+    font-size: 26px !important;
+  }
+  .smallHeading {
+    display: block;
+    font-size: 26px;
+    font-weight: 600;
+  }
+  .color {
+    color: #ff5003;
+  }
+  .bioTitle {
+    display: none;
+  }
+  .background {
+    width: 100%;
+    align-items: center;
+  }
+  .background h2 {
+    font-size: 18px;
+  }
+
+  .mentorInfo {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 120px;
+  }
+  .mentorProfile {
+    width: 100%;
+  }
+  .profileImage {
+    width: 85%;
+    height: 68vh;
+  }
+  .mentorDetails {
+    width: 85%;
+  }
+  .prevButton {
+    position: absolute;
+    top: 40%;
+    transform: translateX(-50%);
+    left: 15%;
+  }
+  .nextButton {
+    position: absolute;
+    top: 40%;
+    transform: translateX(-50%);
+    right: 0;
+  }
+
+  .mentorBio {
+    margin: 0 auto;
+    width: 75%;
+  }
+
+  .mentorStats {
+    width: 100%;
+    gap: 10px;
+  }
+  .statItem {
+    width: 32%;
+    height: 110px;
+    padding: 15px;
+  }
+  .statIcon {
+    width: 35px;
+    height: 35px;
+  }
+
+  .statItem p:first-of-type {
+    font-size: 16px;
+    margin-bottom: 22px;
+  }
+  .statItem p:last-of-type {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 377px) and (max-width: 768px) {
+  .mentorInfo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .mentorProfile {
+    width: 100%;
+    padding: 25px;
+  }
+  .mentorBio {
+    padding: 0 20px;
+    width: 100%;
+    font-size: 22px;
+  }
+  .bioTitle {
+    display: none;
+  }
+  .profileImage {
+    width: 100%;
+    height: 68vh;
+  }
+  .statIcon {
+    width: 45px;
+    height: 45px;
+  }
+  .statItem p:first-of-type {
+    font-size: 16px;
+    margin-bottom: 22px;
+  }
+  .statItem p:last-of-type {
+    font-size: 14px;
+  }
+  .prevButton {
+    position: absolute;
+    top: 40%;
+    transform: translateX(-50%);
+    left: 15%;
+  }
+  .nextButton {
+    position: absolute;
+    top: 40%;
+    transform: translateX(-50%);
+    right: 0;
+  }
+  .bioText{
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1025px) {
+  .mentorInfo {
+    display: none;
+  }
+}

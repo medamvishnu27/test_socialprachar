@@ -1,0 +1,90 @@
+/** @format */
+
+.trustPilotContainer {
+  background-color: #543cdf7d;
+  height: 100vh;
+}
+.trustPilotHeader {
+  display: flex;
+  justify-content: center;
+  /* padding-bottom: 50px; */
+  color: hsl(249, 59%, 19%);
+}
+.profile {
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  background: #553cdf;
+}
+.trustPilotScrollContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.cardBody {
+  border: 2px solid #553cdf;
+  height: 50vh;
+  overflow: hidden;
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 2px 8px 16px rgba(84, 60, 223, 0.454);
+}
+
+.title {
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: -8px;
+}
+
+.description {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+hr {
+  height: 3px;
+  background-color: #4d37cc;
+  border: none;
+  margin: 1rem 0;
+}
+.iconEnd {
+  position: absolute;
+  bottom: 55px;
+  right: 35px;
+}
+.cornerStar {
+  border: 2px solid #553cdf;
+  width: 110px;
+  padding: 5px 8px;
+  color: #553cdf;
+  border-radius: 5px;
+  position: absolute;
+  right: 45px;
+  top: 30px;
+  background: white;
+}
+
+@media(max-width:376px){
+  .profile{
+    width: 35px;
+    height: 35px;
+  }
+  .description{
+    position: relative;
+    top: -15px;
+    font-size:11px;
+  }
+}
+
+@media(min-width:377px) and (max-width:1250px){
+  .description{
+    font-size: 10px;
+  }
+}
+@media (max-width: 1250px) {
+  .iconEnd {
+    position: absolute;
+    bottom: 15px;
+  }
+
+}

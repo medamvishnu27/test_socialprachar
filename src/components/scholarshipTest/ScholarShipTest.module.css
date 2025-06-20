@@ -1,0 +1,232 @@
+/** @format **/
+.calendarContainer {
+  width: 90%;
+  max-width: 700px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+}
+
+.calendarHeader {
+  background-color: #3a36e0;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.eventsContainer {
+  padding: 20px;
+}
+
+.eventCard {
+  display: flex;
+  margin-bottom: 20px;
+  border-left: 5px solid #3a36e0;
+  background-color: #f8f9ff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.eventCard.offline {
+  border-left-color: #ff3002;
+}
+
+.dateBox {
+  width: 120px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  border-right: 1px solid #eee;
+}
+
+.month {
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #555;
+}
+
+.day {
+  font-size: 32px;
+  font-weight: bold;
+  color: #333;
+  line-height: 1;
+}
+
+.year {
+  font-size: 14px;
+  color: #777;
+  margin-top: 5px;
+}
+
+.eventDetails {
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.eventTitle {
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.eventTitle.online {
+  color: #3a36e0;
+}
+
+.eventTitle.offline {
+  color: #ff3002;
+}
+
+.eventIcon {
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 34px;
+}
+
+.eventIcon.online {
+  background-color: #e8e7ff;
+  color: #3a36e0;
+}
+
+.eventIcon.offline {
+  background-color: #ffe8e7;
+  color: #ff3002;
+}
+
+.eventTime {
+  color: #666;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.countdownLabel {
+  display: inline-block;
+  padding: 4px 8px;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  font-size: 12px;
+  color: #666;
+  margin-top: 10px;
+}
+
+.boxBars {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to right, #553cdf, #e6f0ff);
+  border-radius: 25px;
+  padding: 10px 20px;
+  margin: 10px 0;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.boxBars svg {
+  margin-right: 10px;
+  font-size: 24px;
+}
+
+.downBoxBars {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to right, #553cdf, #e6f0ff);
+  border-radius: 25px;
+  padding: 25px 25px;
+  margin: 10px 0;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.marks {
+  margin-left: 15px;
+}
+
+/* FAQ Styles */
+.faqContainer {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faqItem {
+  margin-bottom: 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.faqQuestion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  user-select: none;
+}
+
+.faqQuestion:hover {
+  background-color: #e9ecef;
+}
+
+.faqQuestion.active {
+  background-color: #553cdf;
+  color: white;
+}
+
+.questionText {
+  margin: 0;
+  font-weight: bold;
+  font-size: 1.1rem;
+  flex-grow: 1;
+  text-align: left;
+}
+
+.chevronIcon {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+  margin-left: 1rem;
+}
+
+.faqAnswer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  background-color: white;
+}
+
+.faqAnswer.show {
+  max-height: 500px; /* Adjust based on your content */
+}
+
+.answerContent {
+  padding: 1.5rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+.answerContent p {
+  margin: 0;
+  line-height: 1.6;
+  color: #555;
+  font-size: 1rem;
+}

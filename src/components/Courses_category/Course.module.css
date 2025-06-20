@@ -1,0 +1,251 @@
+/** @format */
+
+.categorypage {
+  margin-bottom: 120px;
+}
+.thumbnail {
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+}
+
+.cover_img h1 {
+  position: relative;
+  top: 120px;
+  padding-left: 25px;
+  color: white;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.cover_img {
+  width: 100%;
+  position: relative;
+  height: 40vh;
+  overflow: hidden;
+}
+
+/* category style */
+
+/* search bar  */
+.category {
+  margin-top: 130px;
+  padding: 50px 30px 40px;
+  margin-left: 50px;
+  border: 2px solid #eaeaea;
+  width: 20%;
+  border-radius: 10px;
+}
+.CardsSection {
+  margin-top: 130px;
+  margin-right: 50px;
+  width: 80%;
+}
+.searchBar input {
+  padding: 10px;
+  width: 100%;
+  font-size: 16px;
+  border-radius: 5px;
+  background: #fafeff;
+  border: 2px solid #eaeaea;
+}
+.search input:focus {
+  outline: none;
+}
+.searchBar {
+  padding: 20px 0px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.searchBar button {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: #acacac;
+  z-index: 10;
+}
+
+.search p {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* categorypart */
+.EntirePage {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.categories {
+  margin-bottom: 40px;
+}
+.categories h5 {
+  font-size: 18px;
+  padding-top: 15px;
+  padding-bottom: 25px;
+}
+
+.categorypart {
+  display: flex;
+  width: 100%;
+  height: 22px;
+  padding-bottom: 35px;
+}
+
+.categorypart label {
+  width: 100%;
+  cursor: pointer;
+}
+
+.categorypart p {
+  position: relative;
+  left: 24px;
+  top: -3px;
+  font-size: 17px;
+}
+
+.categorypart input {
+  position: relative;
+  width: 20px;
+  border: 1px solid #ccc;
+  height: 19px;
+  cursor: pointer;
+  appearance: none;
+}
+
+.shadow {
+  box-shadow: 0px 0px 2px 4px #543cdf31;
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.unchecked_shadow {
+  box-shadow: 0px 0px 2px 4px #e6e6e6b0;
+  transition: box-shadow 0.2s ease-in-out;
+}
+.button {
+  display: flex;
+  justify-content: center;
+}
+.btn {
+  background-color: white;
+  color: #553cdf;
+  border: 0.5px solid #553cdf;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #553cdf;
+  color: white;
+}
+
+.scrollButton {
+  position: fixed;
+  right: 20px;
+  bottom: 40px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: white;
+  background: #553cdf;
+  cursor: pointer;
+  z-index: 1000;
+  border: none;
+}
+
+.scrollButton:hover {
+  background-color: #543cdfa7;
+}
+
+.scrollButton span {
+  display: inline-block;
+  font-size: 20px;
+  transform: rotate(-90deg);
+}
+
+/* Default checkbox appearance */
+.courseCSS input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  border: 2px solid #ccc;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Checked state */
+.categorypart input:checked {
+  background-color: #553cdf;
+}
+
+input[type="checkbox"]:checked::after {
+  content: "\2713";
+  position: absolute;
+  top: 2px;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  color: white;
+  border-radius: 2px;
+  transform: translate(-50%, -50%);
+}
+
+/* media queries */
+
+@media (max-width: 1451px) {
+  .searchBar button {
+    left: 175px;
+  }
+}
+
+@media (max-width: 1251px) {
+  .category {
+    margin-left: 10px;
+    width: 24%;
+  }
+  .searchBar button {
+    left: 190px;
+  }
+  .CardsSection {
+    margin-right: 10px;
+  }
+}
+@media(max-width:1160px){
+  .category{
+    display: none;
+  }
+   .CardsSection {
+    margin: 20px;
+    flex: 1 1 calc(100%-20px);
+  }
+}
+@media (max-width: 1100px) and (min-width: 990px) {
+  .searchBar button {
+    left: 160px;
+  }
+}
+
+@media (max-width: 990px) {
+  .EntirePage {
+    margin-top: 60px;
+  }
+  .category {
+    display: none;
+  }
+  .CardsSection {
+    margin: 20px;
+    flex: 1 1 calc(100%-20px);
+  }
+}

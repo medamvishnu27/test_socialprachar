@@ -1,0 +1,255 @@
+/** @format */
+
+.timelineHeading {
+  position: relative;
+  font-size: 38px;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 550px;
+  margin-bottom: 50px;
+}
+
+.timelineContainer {
+  position: relative;
+  padding: 50px 20px;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Line for the Timeline */
+.timelineLine {
+  position: absolute;
+  left: 50%;
+  top: 100px;
+  width: 4px;
+  height: 92%;
+  background: #e0e0e0;
+  transform: translateX(-50%);
+  transition: height 0.3s ease-in-out;
+}
+
+.progressLine {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 4px;
+  background: #4f46e5;
+  border-radius: 2px;
+  z-index: 2;
+  transition: height 0.3s ease-in-out;
+}
+
+/* Card Styles */
+.courseLevel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  z-index: 3;
+  position: relative;
+  top: -30px;
+  padding-bottom: 20px;
+}
+
+.levelCard {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  max-width: 400px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.levelCard:hover {
+  transform: scale(1.05);
+}
+
+/* Odd and Even Card Positioning */
+.levelCard:nth-child(odd) {
+  flex-direction: row-reverse;
+  margin-right: auto;
+  transform: translateX(-60%);
+}
+
+.levelCard:nth-child(even) {
+  flex-direction: row;
+  margin-left: auto;
+  transform: translateX(60%);
+}
+
+/* Icon Styles */
+.levelIcon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #4f46e5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 20px;
+  margin-right: 20px;
+  position: absolute;
+  left: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.levelCard:nth-child(odd) .levelIcon {
+  margin-right: 0;
+  margin-left: 450px;
+}
+.levelCard:nth-child(even) .levelIcon {
+  margin-left: -28px;
+}
+
+/* Content Styles */
+.levelContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.levelTitle {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.levelDescription {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .timelineHeading {
+    font-size: 28px;
+  }
+
+  .levelCard {
+    max-width: 300px;
+    flex-direction: column;
+    align-items: center;
+    transform: translateX(0);
+    margin: 0 auto;
+  }
+
+  .levelIcon {
+    margin: 0 auto 10px;
+  }
+
+  .levelContent {
+    align-items: center;
+    text-align: center;
+  }
+  .levelDescription {
+    text-align: start;
+  }
+  .levelCard:nth-child(odd) {
+    flex-direction: row-reverse;
+    margin-right: auto;
+    transform: translateX(-60%);
+  }
+
+  .levelCard:nth-child(even) {
+    flex-direction: row;
+    margin-left: auto;
+    transform: translateX(60%);
+  }
+  .levelCard:nth-child(odd) .levelIcon {
+    margin-right: 0;
+    margin-left: 340px;
+  }
+  .levelCard:nth-child(even) .levelIcon {
+    margin-left: -20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .timelineHeading {
+    font-size: 18px;
+  }
+
+  .levelCard {
+    max-width: 250px;
+  }
+
+  .levelTitle {
+    font-size: 1rem;
+  }
+
+  .levelDescription {
+    font-size: 0.8rem;
+  }
+
+  .levelCard:nth-child(odd) {
+    flex-direction: row;
+    margin-right: auto;
+    transform: translateX(0);
+  }
+
+  .levelCard:nth-child(even) {
+    flex-direction: row;
+    margin-left: auto;
+    transform: translateX(0);
+  }
+  .levelCard:nth-child(odd) .levelIcon {
+    margin-right: 0;
+    margin-left: -28px;
+  }
+  .levelCard:nth-child(even) .levelIcon {
+    margin-left: -28px;
+  }
+}
+
+@media (max-width: 376px) {
+  .timelineHeading {
+    font-size: 25px;
+  }
+  .timelineLine {
+    position: absolute;
+    left: -38px;
+  }
+  .levelCard {
+    max-width: 250px;
+  }
+
+  .levelTitle {
+    font-size: 1rem;
+  }
+
+  .levelDescription {
+    font-size: 0.8rem;
+  }
+  .levelCard:nth-child(odd) {
+    flex-direction: row;
+    margin-right: auto;
+    transform: translateX(0);
+  }
+
+  .levelCard:nth-child(even) {
+    flex-direction: row;
+    margin-left: auto;
+    transform: translateX(0);
+  }
+  .levelCard:nth-child(odd) .levelIcon {
+    margin-right: 0;
+    margin-left: -28px;
+  }
+  .levelCard:nth-child(even) .levelIcon {
+    margin-left: -28px;
+  }
+}

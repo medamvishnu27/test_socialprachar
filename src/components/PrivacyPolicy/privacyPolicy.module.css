@@ -1,0 +1,26 @@
+/** @format */
+.bg_light {
+  background-color: lightgrey;
+  height: auto;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: black;
+}
+
+.custom_list {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.Page {
+  background-color: white;
+  width: 70%;
+  height: auto;
+  padding: 40px 80px;
+  margin: 50px 0;
+}

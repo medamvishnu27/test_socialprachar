@@ -1,0 +1,12 @@
+.tag{
+    padding-top: 15px;
+}
+@media(max-width:370px){
+    .tagLogo{
+        size: 20;
+    }
+    .tag{
+        padding-top: 12px;
+        font-size: 12px !important;
+    }
+}

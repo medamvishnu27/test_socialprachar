@@ -1,0 +1,20 @@
+.heading{
+    font-family: serif;
+}
+
+/* Make images and videos responsive */
+.ql-editor img,
+.ql-editor video {
+    max-width: 100%;  /* Ensures media fits within the editor */
+    height: auto;      /* Maintains aspect ratio */
+    display: block;    /* Prevents inline display issues */
+    margin: 10px auto; /* Centers the media */
+}
+
+/* Fullscreen Mode for images/videos */
+.reactQuill img,
+.reactQuill video {
+    width: 350px; 
+    height: auto;
+}
+

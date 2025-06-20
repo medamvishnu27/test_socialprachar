@@ -1,0 +1,22 @@
+.jobReadyCourses{
+    background-color: rgb(0, 229, 255);
+}
+.curatedJobsPlatform{
+    background-color: rgb(123, 39, 202);
+}
+.guaranteedJobs{  
+    background-color: #553cdf;
+}
+.careerWorkshops{
+background-color: #ff7c7c;
+}
+.aiPoweredResumeBuilder{
+background-color: orange;
+}
+.aiPoweredAssessmentTools{
+    background-color: rgb(242, 214, 0);
+}
+.image{
+    width: 180px;
+    height: auto;
+}

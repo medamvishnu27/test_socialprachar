@@ -1,0 +1,91 @@
+/** @format */
+.contact {
+  margin-bottom: 100px;
+}
+
+.accordion {
+  width: 100%;
+  max-width: 1000px;
+  margin: 10px auto;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.accordionButton {
+  display: flex;
+  text-align: start;
+}
+.accordionItem {
+  border-top: 1px solid #ddd;
+  margin-bottom: -10px;
+}
+
+.accordionItem:first-child {
+  border-top: none;
+}
+
+.accordionButton {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+
+.accordionButton:hover {
+  background-color: #e9e9e9;
+}
+
+.accordionButton.collapsed {
+  font-weight: 600;
+  color: black;
+}
+
+.symbol {
+  font-size: 1.2rem;
+  color: #333;
+  margin-left: auto;
+  transition: transform 0.3s ease;
+}
+
+.accordionButton[aria-expanded="true"] .symbol {
+  transform: rotate(180deg);
+}
+
+.accordionContent {
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.accordionBody {
+  position: relative;
+  top: -15px;
+  padding: 10px 15px;
+  font-size: 16px;
+  color: black;
+  background-color: #fff;
+  line-height: 1.5;
+}
+
+@media (max-width: 376px) {
+  .accordionButton {
+    font-size: 16px;
+  }
+  .contactSection {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}

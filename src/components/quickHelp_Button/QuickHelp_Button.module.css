@@ -1,0 +1,77 @@
+/** @format */
+
+.suggestionButton {
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.roundButton:hover {
+  background-color: black;
+}
+
+.whatsappLogo {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  top: 4px;
+  left: -3px;
+}
+
+.closeButton {
+  position: relative;
+  bottom: 25px;
+  left: 15px;
+  color: black;
+  font-weight: 600;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.quickHelpText {
+  font-weight: 600;
+  position: relative;
+  top: 15px;
+  right: 10px;
+  font-size: 1rem;
+}
+@media(min-width:450px){
+  .suggestionButton{
+    display: none;
+  }
+}
+@media (max-width: 400px) {
+  .quickHelpText {
+    font-weight: 600;
+    position: relative;
+    top: 15px;
+    right: 10px;
+    font-size: 0.8rem;
+  }
+  .roundButton {
+    width: 35px;
+    height: 35px;
+  }
+  .whatsappLogo {
+    width: 25px;
+    height: 25px;
+    position: relative;
+    top: 0;
+    bottom: 10px;
+    left: -8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .closeButton {
+    position: relative;
+    bottom: 25px;
+    left: 3px;
+    color: black;
+    font-weight: 600;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+}

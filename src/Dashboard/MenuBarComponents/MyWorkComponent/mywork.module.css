@@ -1,0 +1,123 @@
+/* .taskgrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 10px;
+}
+
+.taskitem {
+  margin-bottom: 20px;
+}
+
+.card {
+  border: 1px solid #baaaed;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-rows: 1fr auto;
+  padding: 10px;
+}
+
+.cardbody {
+  overflow-y: auto;
+  padding: 10px;
+}
+
+.cardtitle {
+  font-weight: bold;
+  margin-bottom: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cardtext {
+  margin-bottom: 20px;
+}
+
+.cardtext a {
+  text-decoration: none;
+  color: #337ab7;
+}
+
+.cardtext a:hover {
+  color: #23527c;
+}
+
+.btndanger {
+  background-color: #d9534f;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btndanger:hover {
+  background-color: #c9302c;
+}  */
+
+
+.taskgrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 5px;
+}
+
+.taskitem {
+  margin-bottom: 20px;
+}
+
+.card {
+  border: 1px solid #baaaed;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+  min-height: 300px; /* Set a minimum height */
+  padding: 10px;
+}
+
+.cardbody {
+  overflow-y: auto; /* Allow vertical scrolling if needed */
+  padding: 10px;
+  flex-grow: 1; /* Allow the body to grow and take available space */
+}
+
+.cardtitle {
+  font-weight: bold;
+  margin-bottom: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cardtext {
+  margin-bottom: 20px;
+  overflow: hidden; /* Hide overflow content */
+  text-overflow: ellipsis; /* Add ellipsis for overflow text */
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.cardtext a {
+  text-decoration: none;
+  color: #337ab7;
+}
+
+.cardtext a:hover {
+  color: #23527c;
+}
+
+.btndanger {
+  background-color: #d9534f;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btndanger:hover {
+  background-color: #c9302c;
+}

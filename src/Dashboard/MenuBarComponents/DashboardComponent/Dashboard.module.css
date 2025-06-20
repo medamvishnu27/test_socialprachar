@@ -1,0 +1,21 @@
+.dashboardCard {
+    text-align: center;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border:1px solid #cbc0f3;
+  }
+.dashboardMenuBi{
+    display: inline-block;
+   border:1px solid #cbc0f3 !important;
+   border-radius:50% !important;
+   padding: 10px !important;
+   font-size: 20px !important;
+   width: 40px !important;
+   height: 40px !important;
+   color: #8466e5;
+   text-align: center;
+   line-height: 20px; 
+}

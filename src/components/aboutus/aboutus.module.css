@@ -1,0 +1,48 @@
+/** @format */
+
+.containerXl .smallBuss img {
+  width: 100%;
+  height: auto;
+  border-radius: 3px;
+}
+.weProvide div {
+  text-align: center;
+  background-color: white;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.2), 0 1px 0px 0 rgba(0, 0, 0, 0.19);
+}
+.aboutUsWomenCon .aboutUsWomenConImg img {
+  width: 100%;
+  height: auto;
+}
+.aboutUsWomenCon .para {
+  font-size: 19px;
+  font-weight: 500;
+}
+.weProvide img {
+  width: 60px;
+  height: auto;
+}
+.AboutusPics div img {
+  width: 300px;
+  height: auto;
+  border-radius: 3px;
+}
+@media (max-width: 376px) {
+  .aboutUsWomenConImg {
+    width: 250px;
+    height: auto;
+  }
+  .containerXl .smallBuss img {
+    width: 100%;
+    height: 180px;
+    border-radius: 3px;
+  }
+}
+@media (min-width: 992px) {
+  .aboutUsWomenCon .aboutUsWomenConImg img {
+    width: auto;
+    height: auto;
+  }
+}

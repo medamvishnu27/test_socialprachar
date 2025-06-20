@@ -1,0 +1,538 @@
+/** @format */
+
+:root {
+  --cardHeight: 100vh;
+  --cardTopPadding: 1.5em;
+  --cardMargin: 2vw;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  /* height: 90vh; */
+  gap: 25px;
+  padding: 35px;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  margin-bottom: 20px;
+  width: 35%;
+}
+
+.heading {
+  font-size: 42px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.heading span {
+  color: #ff5003;
+}
+
+.description {
+  font-size: 17px;
+  color: #4d4d4d;
+  margin-bottom: 20px;
+  margin-top: 25px;
+  line-height: 1.6;
+}
+
+.modules {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow-y: auto;
+  height: 85vh;
+  scrollbar-width: 100%;
+  -ms-overflow-style: none;
+}
+
+
+.moduleContainer {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  padding: 40px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  margin-top: 20px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  /* z-index: 1; */
+}
+
+.moduleContainer:nth-child(1) {
+  z-index: 1;
+}
+.moduleContainer:nth-child(2) {
+  position: sticky;
+  top: 20px;
+  z-index: 2;
+}
+.moduleContainer:nth-child(3) {
+  position: sticky;
+  top: 40px;
+  z-index: 3;
+}
+.moduleContainer:nth-child(4) {
+  position: sticky;
+  top: 60px;
+  z-index: 4;
+}
+.moduleContainer:nth-child(5) {
+  position: sticky;
+  top: 80px;
+  z-index: 5;
+}
+.moduleContainer:nth-child(6) {
+  position: sticky;
+  top: 100px;
+  z-index: 6;
+}
+.moduleContainer:nth-child(7) {
+  position: sticky;
+  top: 120px;
+  z-index: 7;
+}
+.moduleContainer:nth-child(8) {
+  position: sticky;
+  top: 140px;
+  z-index: 8;
+}
+.moduleContainer:nth-child(9) {
+  position: sticky;
+  top: 140px;
+  z-index: 9;
+}
+
+.moduleTitle {
+  font-size: 16px;
+  font-weight: bold;
+  color: #23201b;
+  font-family: Satoshi, sans-serif;
+}
+
+.moduleSubTitle {
+  margin-top: 12px;
+  font-size: 28px;
+  color: #11395b;
+}
+
+.details {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.detailItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 18px;
+  gap: 10px;
+  margin: 12px 0;
+  color: #0b4045;
+  background: #b8cfe7;
+  border-radius: 32px;
+}
+
+.detailItem p {
+  display: flex;
+  align-items: center;
+  position: relative;
+  top: 6px;
+}
+
+.descriptionsContainer {
+  margin-top: 20px;
+}
+
+.descriptionItem {
+  position: relative;
+  padding-left: 25px;
+  margin: 10px 0;
+  color: black;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.descriptionItem::before {
+  content: "✔";
+  position: absolute;
+  left: -5px;
+  color: #28a745;
+  font-size: 25px;
+}
+
+/* masterclass */
+.masterclassInfo {
+  position: relative;
+  top: 50px;
+  text-align: center;
+  color: black;
+  margin-bottom: 50px;
+}
+
+.backgroundImage {
+  width: 100%;
+  height: 50vh;
+  object-fit: cover;
+}
+.masterclassQuestion span {
+  color: #ff5003;
+}
+
+.masterclassQuestion {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 42px;
+  font-weight: bold;
+  z-index: 1;
+}
+
+.roleContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: -250px;
+  z-index: 10;
+}
+
+.role {
+  background: linear-gradient(
+    to top,
+    rgba(74, 74, 74, 0.116),
+    rgb(255, 255, 255)
+  );
+  border: 1px solid #f0f0f0;
+  border-radius: 14px;
+  padding: 35px 35px;
+  margin: 0 15px;
+  width: 350px;
+  text-align: start;
+  box-shadow: rgba(213, 230, 255, 0.4) 0px 0px 10px 0px;
+  transition: transform 0.3s;
+  display: flex;
+  height: 200px;
+}
+
+.roleImage {
+  width: 28px;
+  height: 28px;
+  position: relative;
+  left: -20px;
+}
+
+.roleTitle {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.roleDescription {
+  font-size: 18px;
+  color: #383838;
+  line-height: 1.5;
+}
+
+/* media queries */
+@media (max-width: 376px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100% !important;
+    height: 100vh;
+    padding: 10px;
+    gap: 2px;
+  }
+
+  .header {
+    width: 100%;
+  }
+
+  .heading {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: -15px;
+  }
+
+  .description {
+    display: none;
+  }
+
+  .modules {
+    width: 100%;
+  }
+
+  .moduleContainer {
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 15px;
+  }
+  .moduleTitle {
+    font-size: 14px;
+  }
+  .moduleSubTitle {
+    font-size: 20px !important;
+  }
+  .detailsContainer {
+    position: relative;
+    top: -20px;
+  }
+  .details {
+    gap: 15px;
+  }
+  .detailItem {
+    padding: 3px 8px;
+    font-size: 16px;
+  }
+  .descriptionsContainer {
+    position: relative;
+    top: -40px;
+  }
+  .descriptionItem {
+    font-size: 14px;
+  }
+
+  .descriptionItem::before {
+    font-size: 20px;
+  }
+
+  .masterclassInfo {
+    margin-bottom: 30px;
+  }
+
+  .masterclassQuestion {
+    width: 100%;
+    font-size: 26px !important;
+  }
+
+  .roleContainer {
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: -35px;
+  }
+
+  .role {
+    width: 90%;
+    margin: 10px 0;
+    padding: 30px 20px;
+    height: auto;
+  }
+
+  .roleImage {
+    width: 24px;
+    height: 24px;
+    margin-left: 15px;
+  }
+
+  .roleTitle {
+    font-size: 18px;
+  }
+
+  .roleDescription {
+    font-size: 16px;
+  }
+}
+
+/* ṃedia */
+@media (min-width: 377px) and (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .header {
+    width: 100%;
+  }
+
+  .heading {
+    text-align: start;
+    font-size: 40px;
+    margin-bottom: -15px;
+  }
+
+  .description {
+    display: none;
+  }
+
+  .modules {
+    width: 100%;
+    height: auto;
+  }
+
+  .moduleContainer {
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  .moduleSubTitle {
+    font-size: 18px;
+  }
+
+  .moduleTitle {
+    font-size: 16px;
+  }
+  .detailsContainer {
+    position: relative;
+    top: -20px;
+  }
+  .detailItem {
+    padding: 3px 12px;
+    font-size: 16px;
+  }
+
+  .descriptionItem {
+    font-size: 16px;
+  }
+  .descriptionsContainer {
+    position: relative;
+    top: -40px;
+  }
+
+  .descriptionItem::before {
+    font-size: 22px;
+  }
+
+  .masterclassInfo {
+    margin-bottom: 40px;
+  }
+
+  .masterclassQuestion {
+   margin-top: 25px;
+    width: 100%;
+    font-size: 40px;
+  }
+
+  .roleContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .role {
+    width: 90%;
+    margin: 15px 0;
+    height: auto;
+  }
+
+  .roleImage {
+    width: 28px;
+    height: 28px;
+    margin-left: 18px;
+  }
+
+  .roleTitle {
+    font-size: 20px;
+  }
+
+  .roleDescription {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    width: 100%;
+    height: auto;
+  }
+  .header {
+    width: 30%;
+  }
+  .modules {
+    width: 70%;
+  }
+  .moduleContainer{
+    width: 100%;
+  }
+  .moduleSubTitle {
+    font-size: 20px !important;
+  }
+  .detailsContainer {
+    position: relative;
+    top: -20px;
+  }
+  .detailItem {
+    padding: 3px 8px;
+    font-size: 16px;
+  }
+  .descriptionsContainer {
+    position: relative;
+    top: -40px;
+  }
+  .masterclassQuestion {
+    width: 100%;
+    position: absolute;
+    top: -10px;
+  }
+  .role {
+    width: 95%;
+    padding: 30px 5px;
+    height: auto;
+  }
+  .roleTitle {
+    font-size: 20px;
+  }
+  .roleImage {
+    width: 28px;
+    height: 28px;
+    margin-left: 18px;
+  }
+
+  .roleDescription {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 1250px) {
+  .container {
+    width: 95%;
+    height: 100vh;
+  }
+  .header {
+    width: 90%;
+  }
+  .modules {
+    width: 90%;
+    height: 95vh;
+  }
+
+  .moduleSubTitle {
+    font-size: 24px;
+  }
+  .masterclassQuestion {
+    width: 100%;
+    position: absolute;
+    top: -10px;
+  }
+  .roleContainer {
+    padding-top: 15px;
+  }
+  .role {
+    width: 95%;
+    /* margin: 15px 0; */
+    padding: 30px 5px;
+    height: auto;
+  }
+  .roleTitle {
+    font-size: 20px;
+  }
+  .roleImage {
+    width: 28px;
+    height: 28px;
+    margin-left: 18px;
+  }
+
+  .roleDescription {
+    font-size: 18px;
+  }
+}

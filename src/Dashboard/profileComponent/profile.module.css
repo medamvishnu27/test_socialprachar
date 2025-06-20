@@ -1,0 +1,86 @@
+.Profile{
+    background-color:  #8466e5;
+    height: 40vh;
+    border-radius: 10px;
+    position: relative;
+}
+.profileImg{
+position: relative;
+top:27%;
+left: 5%;
+border-radius: 50%;
+overflow: hidden;
+border: 8px solid white;
+width: 200px;
+height: 200px;
+}
+.profileText{
+    position: absolute;
+    left: 25%;
+    color: aliceblue;
+}
+.profileInfo{
+    display: none;
+}
+@media (max-width: 1100px) {
+    .profileText{
+        display: none;
+    }
+    .profileImg{
+        position: relative;
+        top: 75%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        max-width: 200px;
+    } 
+    .profileImg {
+        position: absolute;
+        top: 100%; /* Adjusted for better centering */
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%; /* Ensures the image scales with the screen size */
+        max-width: 200px; /* Limits the maximum width */
+        height: auto; /* Maintains the aspect ratio */
+    }
+    .profileInfo{
+        display: grid; 
+        justify-content: center;
+        place-content: center;
+        margin-top: 19%;
+        height: 30vh;
+        text-align: center; 
+        
+    }
+}
+/* iPad Pro Portrait */
+@media only screen and (min-device-width: 1024px) and (max-device-height: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+    .profileText {
+        display: none;
+    }
+    .profileImg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+    }
+}
+
+/* iPad Pro Landscape */
+@media only screen and (min-device-width: 1366px) and (max-device-height: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+    .profileText {
+        display: none;
+    }
+    .profileImg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+    }
+}

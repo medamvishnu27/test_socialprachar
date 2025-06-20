@@ -1,0 +1,45 @@
+.animated_icon {
+    font-size:3rem;
+
+    color: #553cdf;
+    animation: bounce 1s ease infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translatex(0);
+    }
+    50% {
+        transform: translatex(-10px);
+    }
+}
+
+.homeCoursesBtn{
+    background-color: #553cdf;
+    font-size: 14px;
+    margin-right: 8px;
+    font-weight: 500;
+    color: white;
+    border-radius: 3px;
+    border: none;
+}
+.homeCoursesBtnactive{
+    background-color: #553cdf;
+    color: #ebe9e9;
+}
+
+.saveIcon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.336);
+    border-radius: 50%;
+    padding: 10px 12px;
+    height: 18px;
+    width: 14px;
+    cursor: pointer;
+  }
+  .saveIcon:hover {
+    background: #553cdf;
+  }

@@ -1,0 +1,348 @@
+.buttonStyle {
+  align-items: center;
+  background: #ffffff;
+  border: 0 solid #e2e8f0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  box-sizing: border-box;
+  display: inline-flex;
+  font-family: Inter, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  height: 45px;
+  justify-content: center;
+  line-height: 24px;
+  overflow-wrap: break-word;
+  padding: 20px;
+  text-decoration: none;
+  width: auto;
+  border-radius: 8px;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+.buttonStyle:hover {
+  transform: scale(1.05); /* Slightly enlarge the button */
+  transition: all 0.3s ease;
+}
+
+.navBarSticky {
+  position: sticky;
+  top: 0;
+  white-space: nowrap !important;
+  font-size: 16px;
+  line-height: 26px;
+  z-index: 1000;
+  font-family: "Hind", sans-serif;
+  font-style: normal;
+  /* background-color: #543cdf2f; */
+}
+
+.navbarTogglerBar {
+  border: none !important;
+  outline: none !important;
+  position: absolute;
+  right: 0px !important;
+}
+.navbarTogglerBar:focus {
+  outline: none !important;
+  border: none !important;
+}
+.containerfluidForNav {
+  padding-left: 45px !important;
+  padding-right: 200px !important;
+}
+
+/* second nav css start */
+
+@media (max-width: 992px) {
+  .offCanvasContaniner .offCanvasContaninerHeader {
+    background-color: #553cdf !important;
+    position: absolute;
+    left: 0;
+  }
+  .offCanvasContaniner {
+    font-size: 18.4px;
+    line-height: 26px;
+    font-weight: 500;
+    color: #221859;
+  }
+  .offCanvasContaniner ul {
+    margin-top: 30px;
+    margin-left: 30px;
+  }
+}
+.spLogo {
+  height: auto;
+  width: 350px;
+}
+
+.category {
+  font-size: 17px;
+  font-weight: 300;
+  color: #553cdf;
+  border: #553cdf solid 2px;
+  border-radius: 5px;
+  height: 39px;
+  background-color: #fbfaff;
+}
+
+.category i {
+  font-size: 14px !important;
+}
+
+.login {
+  color: #553cdf;
+  border: #553cdf solid 1px;
+  border-radius: 5px;
+  width: 83px !important;
+  height: 39px !important;
+  background-color: white;
+}
+
+.login:hover {
+  background-color: #553cdf;
+  border: #553cdf solid 1px;
+  color: white;
+}
+.register {
+  background-color: #553cdf;
+  border: #553cdf solid 1px;
+  border-radius: 5px;
+  width: 103px;
+  height: 39px;
+  color: white;
+}
+.register:hover {
+  background-color: white;
+  border: #553cdf solid 1px;
+  color: #553cdf;
+}
+
+/* categoryMenu code starts */
+
+.categorySection .categoryMenu {
+  position: absolute;
+  background-color: white;
+  margin-top: 20px;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  border-radius: 5px;
+}
+
+.categorySection:hover .categoryMenu {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+.categorySection .categoryMenu ul {
+  padding: 20px 20px 0px 20px;
+}
+
+.categorySection .categoryMenu li button {
+  text-decoration: none;
+  margin-bottom: 5px;
+  line-height: 17.6px;
+  width: 167px;
+  height: 72px;
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: white;
+}
+.categorySection .categoryMenu li button div {
+  width: 90px !important;
+  text-align: left;
+}
+.categorySection .categoryMenu li button:hover {
+  background-color: #dedee3ea;
+}
+.categoryMenu p {
+  display: inline;
+  color: #1f1f25;
+  font-weight: 500;
+}
+.textTwo {
+  color: #1f1f25 !important;
+  font-weight: 400 !important;
+  line-height: 14.4px !important;
+}
+.categorySection .categoryMenu img {
+  width: 45px;
+  height: 48px;
+  border-radius: 5px;
+}
+.selectDropDown {
+  border-radius: 5px;
+  border: #553cdf 1px solid !important;
+  color: #553cdf !important;
+  width: 110px !important;
+  height: 40px;
+  outline: none;
+}
+
+/* categoryMenu code ends */
+/* navBarList code starts */
+.navBarList .NavLinkForHover {
+  font-weight: 500;
+  color: #1f1f25;
+}
+.navBarList ul li .NavLinkForHover:hover {
+  color: #553cdf;
+}
+
+/* navBarList code ends */
+/* second nav css ends */
+
+@media (max-width: 767px) {
+  .hiddenMobileSm {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hiddenMobilemd {
+    display: none;
+  }
+  .spLogo {
+    width: 170px;
+  }
+}
+
+@media (min-width: 450px) {
+  .selectDropDown {
+    margin-left: 40px;
+  }
+}
+
+@media (min-width: 990px) {
+  .selectDropDown {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  .hiddenMobileLg {
+    display: none !important;
+  }
+  .hiddenMobileLgMin {
+    display: flex;
+    margin-right: 40px;
+  }
+  .hiddenMobileLgMin i {
+    color: #553cdf;
+  }
+  .buttonStyle {
+    padding: 10px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    width: 80px;
+  }
+}
+
+@media (min-width: 1200.5px) {
+  .hiddenMobileLgMin {
+    display: none !important;
+  }
+}
+@media (max-width: 1250px) {
+  .spLogo {
+    width: 220px;
+  }
+  .containerfluidForNav {
+    padding-left: 5px !important;
+    padding-right: 10px !important;
+  }
+}
+@media (max-width: 340px) {
+  .containerfluidForNav {
+    padding-left: 1px !important;
+    padding-right: 1px !important;
+  }
+  .category :nth-child(2) {
+    position: relative;
+    left: 50px;
+  }
+}
+
+@media (max-width: 375px) {
+  .spLogo {
+    height: auto;
+    width: 170px !important;
+  }
+  /* .selectDropDown {
+    max-width: 85px;
+  } */
+  .categorySection {
+    display: none;
+  }
+  .hiddenMobileLgMin {
+    position: relative;
+    left: 10px !important;
+  }
+}
+
+@media (min-width: 340.6px) and (max-width: 464px) {
+  .spLogo {
+    height: auto;
+    width: 150px;
+  }
+  .selectDropDown {
+    max-width: 110px !important;
+    /* padding: 2px !important; */
+  }
+  .selectDropDown option{
+    font-size:14px !important;
+  }
+
+}
+
+@media (min-width: 330px) and (max-width: 464px) {
+  .containerfluidForNav {
+    padding-left: 9px !important;
+    /* padding-right: 5px!important; */
+  }
+}
+
+@media (min-width: 464px) and (max-width: 768px) {
+  .containerfluidForNav {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+  .spLogo {
+    height: auto;
+    width: 180px;
+  }
+  /* .selectDropDown {
+    margin-top: 10px;
+  } */
+}
+@media (min-width: 768px) {
+  .categorySection {
+    margin-top: 10px;
+  }
+  .navBarSticky {
+    padding: 8px 0px 8px 0px;
+  }
+}
+
+@media (max-width: 768px) {
+  .dropdown-menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .dropdown-item {
+    flex: 1; /* Allow items to take equal space */
+    text-align: center; /* Center-align the text */
+    padding: 10px; /* Add some padding for better touch targets */
+  }
+}

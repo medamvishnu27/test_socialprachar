@@ -1,0 +1,102 @@
+/* Main Container */
+.notFoundContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    background: linear-gradient(135deg, #553cdf, #ffffff);
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Content Box */
+.notFoundContent {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    animation: bounceIn 1s ease-in-out;
+    max-width: 500px;
+    color: white;
+}
+
+/* GIF */
+.notFoundGif {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    animation: float 3s infinite ease-in-out;
+}
+
+/* 404 Title */
+.notFoundTitle {
+    font-size: 80px;
+    font-weight: 700;
+    color: #ffd700;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Description */
+.notFoundText {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    opacity: 0.9;
+    color: black;
+}
+
+/* Button */
+.backHomeBtn {
+    display: inline-block;
+    background: #553cdf;
+    border: 1px solid white;
+    color: white;
+    padding: 8px 18px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+.backHomeBtn:hover {
+    background: #382796;
+    transform: scale(1.1);
+}
+
+/* Floating Animation for GIF */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Bounce Animation */
+@keyframes bounceIn {
+    0% { transform: scale(0.5); opacity: 0; }
+    80% { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .notFoundContent {
+        width: 90%;
+        padding: 30px;
+    }
+    .notFoundTitle {
+        font-size: 60px;
+    }
+    .notFoundGif {
+        width: 220px;
+    }
+}

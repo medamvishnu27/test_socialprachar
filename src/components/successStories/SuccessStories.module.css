@@ -1,0 +1,333 @@
+/** @format */
+/* insights */
+/* Hide scrollbar for IE, Edge */
+.hide_scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none; /* Firefox */
+}
+
+.hide_scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.topContent {
+  background-color: #543cdf31;
+  padding-bottom: 30px;
+}
+
+.insights {
+  width: 100%;
+  padding: 30px;
+}
+.insightsHeader {
+  font-size: 3rem;
+  font-weight: 600;
+}
+.insideBox p {
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+}
+
+.insideBox {
+  background-color: #553cdf;
+}
+strong {
+  font-size: 1.6 rem;
+  color: white;
+}
+
+/* Linkedin Styling */
+.linkedinHeader {
+  font-size: 50px;
+  color: white;
+}
+.wholeLinkedinCard {
+  scroll-behavior: smooth;
+}
+.wholeLinkedinCard::-webkit-scrollbar {
+  /* height: 8px; */
+  display: none;
+}
+
+.profileName > p {
+  font-size: 12px;
+}
+.profileImage {
+  width: 40px;
+  height: 40px;
+}
+.linkedinInnerCardtitle {
+  font-size: 25px;
+  color: #0a66c2;
+  font-weight: 600;
+  display: inline-flex;
+}
+
+.linkedinLogo {
+  width: 26px;
+  height: 26px;
+  position: relative;
+  top: 4px;
+  left: 2px;
+}
+
+.linkedin {
+  height: 95vh;
+  background-color: #543cdfa3;
+  /* margin-bottom: 50px; */
+}
+
+.customCard {
+  /* max-width: 500px; */
+  border-radius: 15px;
+  padding: 30px;
+  transition: all 0.3s ease;
+  margin-right: 18px;
+  visibility: visible;
+}
+
+.customCard:hover {
+  transform: scale(1.05);
+}
+
+.linkedinInnerBox {
+  border: 1px solid rgba(0, 0, 0, 0.525);
+  border-radius: 5px;
+  max-height: 320px;
+  overflow-y: hidden;
+}
+
+.linkedinContent > p {
+  font-size: 14px;
+}
+
+@media (max-width: 376px) {
+  .insideBox strong {
+    font-size: 18px;
+  }
+  .insideBox p {
+    font-size: 14px;
+  }
+
+  .linkedinInnerCardtitle {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .linkedinLogo {
+    width: 20px;
+    height: 20px;
+  }
+  .linkedinContent p {
+    font-size: 10px;
+  }
+  .linkedinInnerBox {
+    max-height: 240px;
+  }
+
+  .profileImage {
+    width: 30px;
+    height: 30px;
+  }
+  .profileName h5 {
+    font-size: 13px;
+  }
+  .profileName p {
+    font-size: 8px;
+  }
+  .alumniProfileImage {
+    width: 110px !important;
+    height: 100px !important;
+    position: relative;
+    top: 20px !important;
+    left: 10px !important;
+  }
+
+  .table {
+    width: 140px !important;
+  }
+
+  .personalInfo {
+    position: relative;
+    top: 10px !important;
+    left: 10px !important;
+  }
+  .offers {
+    height: 20px;
+  }
+  .leadHeading {
+    font-size: 8px;
+  }
+  .Headercontent {
+    font-size: 14px !important ;
+  }
+}
+
+@media (min-width: 377px) and (max-width: 767px) {
+  .Headercontent {
+    font-size: 14px !important ;
+  }
+  .linkedinInnerCardtitle {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .linkedinLogo {
+    width: 22px;
+    height: 22px;
+  }
+  .linkedinContent p {
+    font-size: 12px;
+  }
+  .linkedinInnerBox {
+    max-height: 240px;
+  }
+
+  .profileImage {
+    width: 30px;
+    height: 30px;
+  }
+  .profileName h5 {
+    font-size: 14px;
+  }
+  .profileName p {
+    font-size: 10px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .linkedin {
+    height: 110vh;
+  }
+  .linkedinContent p {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .linkedin {
+    height: 110vh;
+  }
+  .linkedinContent p {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1250px) {
+  .linkedinContent p {
+    font-size: 14px;
+  }
+  .linkedin {
+    height: 110vh;
+  }
+  .linkedinInnerBox {
+    max-height: 320px;
+  }
+}
+
+/* alumini styles */
+.ourAlumini_Reviews {
+  height: 75%;
+  margin-top: 50px;
+}
+.wholeAlumniCard {
+  background: linear-gradient(180deg, white, #553cdf);
+  border: 1px solid #543cdf5f;
+}
+.alumniScrollContainer::-webkit-scrollbar {
+  display: none;
+}
+.personalInfo {
+  background: white;
+  z-index: 1;
+  position: relative;
+  top: 20px;
+  left: 20px;
+  border-radius: 10px;
+  font-size: 9px;
+  font-weight: 600;
+  max-width: 110px;
+  max-height: 80px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.alumniProfileImage {
+  width: 130px;
+  height: 130px;
+  position: relative;
+  top: 30px;
+  left: -20px;
+}
+
+.aluminiStudentName {
+  background-color: #d2d1d4;
+  color: black;
+  padding: 4px 16px;
+  margin-bottom: 2px;
+  border-radius: 5px;
+  width: 100%;
+}
+
+/* Parent container for filter buttons */
+.filterButtons {
+  margin: 20px 0;
+}
+
+/* Button group for layout control */
+.btn_group {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Filter Buttons styling */
+.btn {
+  padding: 12px 24px;
+  font-size: 16px;
+  color: black;
+  background: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  background-color: darken(#007bff, 10%);
+  opacity: 0.9;
+}
+
+.btn:focus {
+  outline: none;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+.btn:active {
+  transform: scale(0.95);
+  box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.leadHeading {
+  font-size: 10px;
+  font-weight: bold;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+}
+.Headercontent {
+  font-size: 1.6rem;
+  line-height: "1.8";
+  /* margin: "0 auto"; */
+  font-weight: "400";
+  margin-bottom: -80px;
+}
+/* filter button ending */
+
+/* stats styling */
+.statsContainer {
+  margin-bottom: -100px;
+}

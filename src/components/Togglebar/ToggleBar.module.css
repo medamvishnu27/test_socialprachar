@@ -1,0 +1,144 @@
+/** @format */
+
+.Header {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 10px;
+}
+.Header p {
+  font-size: 35px;
+  font-weight: 600;
+}
+
+.toggleBar {
+  position: relative;
+  top: 50px;
+}
+
+/* Toggle Button */
+.toggleButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(90deg);
+  background-color: #543cdf29;
+  color: #5841db;
+  border: none;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.Clicked {
+  background-color: #5841db;
+  color: white;
+}
+
+/* close button */
+.Closebtn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+/* Toggle Content Section */
+.toggleContent {
+  max-height: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  overflow-y: auto;
+  transform: translateX(100%);
+  transition: max-height 0.3s ease-out, opacity 0.3s ease-out,
+    transform 0.3s ease-out;
+  background-color: #0000003e;
+  backdrop-filter: blur(10px);
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 999;
+}
+
+/* Show Toggle Content */
+.show {
+  max-height: 1000px;
+  opacity: 1;
+  transform: translateX(0);
+  transition: max-height 0.3s ease-in, opacity 0.3s ease-in,
+    transform 0.3s ease-out;
+}
+.TogglebtnContent {
+  opacity: 1;
+}
+
+.category {
+  padding: 50px 30px 40px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid #eaeaea;
+  width: 30%;
+  height: auto;
+  border-radius: 10px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  box-sizing: border-box;
+  background: #fff;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transform: translateY(0);
+  opacity: 1;
+  z-index: 1000;
+}
+
+/* media queries */
+@media(min-width:1161px){
+.Header{
+  display: none;
+}
+}
+@media (min-width: 991px) {
+  .TogglebtnContent {
+    display: none;
+  }
+  .toggleContent {
+    display: none;
+  }
+}
+
+@media (max-width: 980px) {
+   .Header {
+    position: relative;
+    top: 50px;
+  }
+  .category {
+    width: 30%;
+    top: 10px;
+    right: 10px;
+  }
+}
+@media (min-width: 560px) and (max-width: 768px) {
+  .category {
+    width: 40%;
+    top: 10px;
+    right: 10px;
+  }
+}
+@media (min-width: 400px) and (max-width: 550px) {
+  .category {
+    width: 50%;
+    top: 10px;
+    right: 10px;
+  }
+}
+@media (min-width: 300px) and (max-width: 420px) {
+  .category {
+    width: 85%;
+    top: 10px;
+    right: 10px;
+  }
+}

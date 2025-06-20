@@ -1,0 +1,325 @@
+/** @format */
+.carousel {
+  display: flex;
+  overflow: hidden;
+  width: 95%;
+  height: 500px;
+}
+
+.carouselImages {
+  display: flex;
+  gap: 20px;
+  animation: scroll-left 0s linear infinite;
+}
+
+.carouselImage{
+  width: 250px;
+  height: 220px;
+}
+.carouselImage img{
+  border-radius: 15px;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.testmonials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  /* top: 150px; */
+  z-index: 1;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heading {
+  position: relative;
+  top: 50px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: fit-content;
+  color: #242424;
+  background: #ffebda;
+  border-radius: 32px;
+  font-size: 20px;
+  padding: 5px 15px;
+  letter-spacing: 1.5px;
+  /* z-index: 1; */
+}
+
+.subHeading { 
+  color: #242424;
+  font-size: 42px;
+  font-weight: 600;
+  margin-top: 35px;
+  margin-bottom: -20px;
+  max-width: 800px;
+  text-align: center;
+  line-height: 51px;
+}
+
+.highlatedWord {
+  /* font-size: 42px; */
+  color: rgb(255, 80, 3);
+}
+.line {
+  width: 25%;
+  height: 32px;
+  margin-top: 0px;
+  position: relative;
+  top: -60px;
+  left: -120px;
+}
+
+.image {
+  width: 70%;
+  margin-top: 10px;
+}
+
+.statsContainer {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 330px;
+  margin-top: 15px;
+}
+
+.stat {
+  text-align: center;
+}
+
+.statValue {
+  font-size: 52px;
+  font-weight: bold;
+}
+
+.statLabel {
+  font-size: 20px;
+  color: #535353;
+}
+
+/* media queries */
+/* Media Queries for up to 375px screens */
+@media (max-width: 376px) {
+  .testmonials {
+    padding: 10px;
+  }
+
+  .heading {
+    font-size: 18px;
+    padding: 5px 10px;
+    position: relative;
+    top: 80px;
+  }
+
+  .subHeading {
+    font-size: 24px;
+    position: relative;
+    top: 40px;
+  }
+
+  .subHeading1 {
+    top: 15px;
+    max-width: 80%;
+    text-align: center;
+  }
+
+  .line {
+    width: 50%;
+    height: 24px;
+    position: relative;
+    top: -20px;
+    left: -80px;
+  }
+
+  .image {
+    width: 100%;
+    max-width: 600px;
+    overflow: hidden;
+    height: auto;
+    margin-top: 25px;
+  }
+
+  .statsContainer {
+    align-items: center;
+    gap: 30px;
+    margin-top: 10px;
+  }
+
+  .statValue {
+    font-size: 40px;
+  }
+
+  .statLabel {
+    max-width: 50px;
+    font-size: 18px;
+    color: #535353;
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 377px) and (max-width: 575px) {
+  .carouselImage img {
+    width: 230px;
+    height: auto;
+    border-radius: 15px;
+  }
+
+  .heading {
+    font-size: 20px;
+    padding: 10px 15px;
+  }
+
+  .subHeading {
+    width: 95%;
+    font-size: 26px;
+    line-height: 38px;
+    margin-bottom: 10px;
+  }
+
+  .highlatedWord {
+    font-size: 30px;
+  }
+
+  .line {
+    width: 60%;
+    height: 26px;
+    left: -60px;
+    display: none;
+  }
+
+  .image {
+    width: 100%;
+    max-width: 350px;
+    margin-top: 20px;
+  }
+
+  .statsContainer {
+    gap: 40px;
+    margin-top: 15px;
+  }
+
+  .statValue {
+    font-size: 42px;
+  }
+
+  .statLabel {
+    max-width: 60px;
+    font-size: 20px;
+  }
+}
+
+/* Medium Devices (576px - 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+  .testmonials {
+    margin-top: -60px;
+    padding: 20px;
+  }
+
+  .heading {
+    font-size: 22px;
+    padding: 15px 20px;
+  }
+
+  .subHeading {
+    font-size: 28px;
+    line-height: 40px;
+    margin-bottom: 15px;
+  }
+
+  .highlateWord {
+    font-size: 26px;
+  }
+
+  .line {
+    display: none;
+    width: 70%;
+    height: 28px;
+    left: -40px;
+  }
+
+  .image {
+    width: 90%;
+    max-width: 400px;
+    margin-top: 15px;
+  }
+
+  .statsContainer {
+    width: 100%;
+    max-width: 90%;
+    gap: 50px;
+    margin-top: 20px;
+  }
+
+  .statValue {
+    font-size: 44px;
+  }
+
+  .statLabel {
+    max-width: 70px;
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .testmonials {
+    margin-top: -40px;
+    padding: 20px;
+  }
+
+  .heading {
+    font-size: 22px;
+    padding: 10px 15px;
+  }
+
+  .subHeading {
+    font-size: 38px;
+    line-height: 40px;
+    margin-bottom: 15px;
+  }
+
+  .highlateWord {
+    font-size: 38px;
+  }
+
+  .line {
+    display: none;
+    width: 70%;
+    height: 28px;
+    left: -40px;
+  }
+
+  .image {
+    width: 100%;
+    /* max-width: 400px; */
+    margin-top: 15px;
+  }
+
+  .statsContainer {
+    width: 100%;
+    max-width: 100%;
+    gap: 50px;
+    margin-top: 20px;
+  }
+
+  .statValue {
+    font-size: 44px;
+  }
+
+  .statLabel {
+    max-width: 70px;
+    font-size: 22px;
+  }
+}
