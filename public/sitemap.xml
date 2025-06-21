@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
   <url>
     <loc>https://socialprachar.com/</loc>
-    <lastmod>2025-06-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://socialprachar.com/thank-you</loc>
     <lastmod>2025-06-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -19,13 +14,163 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://socialprachar.com/scholarship-test</loc>
+    <lastmod>2025-06-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://socialprachar.com/career-roadmaps</loc>
     <lastmod>2025-06-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://socialprachar.com/socialhire</loc>
+    <loc>https://socialprachar.com/courses</loc>
+    <lastmod>2025-06-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://socialprachar.com/aboutUs</loc>
+    <lastmod>2025-06-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://socialprachar.com/success-stories</loc>
+    <lastmod>2025-06-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://socialprachar.com/career-counselling</loc>
+    <lastmod>2025-06-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://socialprachar.com/upcoming-batches</loc>
+    <lastmod>2025-06-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://socialprachar.com/Quiz</loc>
+    <lastmod>2025-06-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://socialprachar.com/thank-you</loc>
+    <lastmod>2025-06-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://socialprachar.com/login</loc>
+    <lastmod>2025-06-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://socialprachar.com/dashboard</loc>
+    <lastmod>2025-06-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://socialprachar.com/signup</loc>
+    <lastmod>2025-06-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://socialprachar.com/profile</loc>
+    <lastmod>2025-06-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://socialprachar.com/profile/myprofile</loc>
+    <lastmod>2025-06-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://socialprachar.com/profile/mywork</loc>
+    <lastmod>2025-06-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://socialprachar.com/profile/enrolled-courses</loc>
+    <lastmod>2025-06-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://socialprachar.com/profile/enrolled-courses/enrolled</loc>
+    <lastmod>2025-06-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://socialprachar.com/profile/enrolled-courses/active-courses</loc>
+    <lastmod>2025-06-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://socialprachar.com/profile/enrolled-courses/completed-courses</loc>
+    <lastmod>2025-06-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://socialprachar.com/profile/wishlist</loc>
+    <lastmod>2025-06-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://socialprachar.com/profile/reviews</loc>
+    <lastmod>2025-06-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://socialprachar.com/profile/quizAttempts</loc>
+    <lastmod>2025-06-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://socialprachar.com/profile/orderHistory</loc>
+    <lastmod>2025-06-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://socialprachar.com/profile/question-answer</loc>
+    <lastmod>2025-06-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://socialprachar.com/profile/settings</loc>
+    <lastmod>2025-06-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://socialprachar.com/profile/settings/password-settings</loc>
+    <lastmod>2025-06-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://socialprachar.com/profile/settings/socialProfile-settings</loc>
     <lastmod>2025-06-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -79,36 +224,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://socialprachar.com/courses</loc>
-    <lastmod>2025-06-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://socialprachar.com/success-stories</loc>
-    <lastmod>2025-06-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://socialprachar.com/career-counselling</loc>
-    <lastmod>2025-06-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://socialprachar.com/upcoming-batches</loc>
-    <lastmod>2025-06-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://socialprachar.com/aboutUs</loc>
-    <lastmod>2025-06-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://socialprachar.com/courseBlog</loc>
     <lastmod>2025-06-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -116,12 +231,6 @@
   </url>
   <url>
     <loc>https://socialprachar.com/codeclash</loc>
-    <lastmod>2025-06-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://socialprachar.com/scholarship-test</loc>
     <lastmod>2025-06-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
