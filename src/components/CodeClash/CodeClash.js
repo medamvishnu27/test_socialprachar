@@ -1,16 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import styles from './codeclash.module.css';
-import { Helmet } from 'react-helmet-async';
 
 const CodeClash = () => {
-  useEffect(() => {
-    document.title = "CodeClash 2.0 : A multi-day coding competition for student | social Prachar";
-  }, []);
-
   const [isFormOpen, setIsFormOpen] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [openFaq, setOpenFaq] = useState(null);
+
+  // Removed useEffect for document.title
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -306,9 +304,6 @@ const CodeClash = () => {
 
   return (
     <>
-      <Helmet>
-        <title>CodeClash 2.0 : A multi-day coding competition for student | social Prachar</title>
-      </Helmet>
       <div className={styles.pageContainer} style={{ background: "linear-gradient(to top, rgb(107, 86, 229) 5%, rgb(244, 240, 240) 100%)", }}>
         <div className="container mx-auto px-4 py-8">
           <div className={`text-center mb-12 ${styles.fadeIn}`}>
@@ -317,7 +312,7 @@ const CodeClash = () => {
               <h1 className={styles.mainTitle}>
                 Code Clash 2.0
               </h1>
-              <span className={`${styles.headerIcon} ${styles.bounce} ${styles.bounceDelay}`}>��</span>
+              <span className={`${styles.headerIcon} ${styles.bounce} ${styles.bounceDelay}`}></span>
             </div>
             <p className={styles.subtitle}>by Social Prachar</p>
             <p className={styles.tagline}>🏆 Challenge • 🎯 Showcase • 🏅 Rewards</p>

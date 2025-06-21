@@ -2,106 +2,127 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://socialprachar.com/</loc>
+    <lastmod>2025-06-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://socialprachar.com/courses</loc>
+    <loc>https://socialprachar.com/thank-you</loc>
+    <lastmod>2025-06-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://socialprachar.com/success-stories</loc>
+    <loc>https://socialprachar.com/privacy-policy</loc>
+    <lastmod>2025-06-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://socialprachar.com/workshop</loc>
+    <loc>https://socialprachar.com/career-roadmaps</loc>
+    <lastmod>2025-06-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://socialprachar.com/upcoming-batches</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://socialprachar.com/aboutUs</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://socialprachar.com/courseBlog</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://socialprachar.com/codeclash</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://socialprachar.com/scholarship-test</loc>
+    <loc>https://socialprachar.com/socialhire</loc>
+    <lastmod>2025-06-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://socialprachar.com/full-stack-developer-course</loc>
+    <lastmod>2025-06-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://socialprachar.com/data-science</loc>
+    <lastmod>2025-06-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://socialprachar.com/mern-full-stack-developer-course</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://socialprachar.com/python-full-stack-development-course</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://socialprachar.com/java-full-stack-development-course</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://socialprachar.com/awsdevopscourse</loc>
+    <loc>https://socialprachar.com/mern-stack-course</loc>
+    <lastmod>2025-06-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://socialprachar.com/artificial-intelligence-course-training-institute-in-hyderabad</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://socialprachar.com/generative-ai-course-training-institute-hyderabad</loc>
+    <lastmod>2025-06-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://socialprachar.com/digital-marketing-course-training-institute-hyderabad</loc>
+    <lastmod>2025-06-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://socialprachar.com/data-analytics-course-training-hyderabad</loc>
+    <loc>https://socialprachar.com/python-full-stack-development-course</loc>
+    <lastmod>2025-06-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://socialprachar.com/snowflake-training-in-hyderabad</loc>
+    <loc>https://socialprachar.com/java-full-stack-development-course</loc>
+    <lastmod>2025-06-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://socialprachar.com/salesforce-course</loc>
+    <loc>https://socialprachar.com/aws-devops-course</loc>
+    <lastmod>2025-06-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://socialprachar.com/courses</loc>
+    <lastmod>2025-06-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://socialprachar.com/success-stories</loc>
+    <lastmod>2025-06-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://socialprachar.com/career-counselling</loc>
+    <lastmod>2025-06-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://socialprachar.com/upcoming-batches</loc>
+    <lastmod>2025-06-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://socialprachar.com/aboutUs</loc>
+    <lastmod>2025-06-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://socialprachar.com/courseBlog</loc>
+    <lastmod>2025-06-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://socialprachar.com/codeclash</loc>
+    <lastmod>2025-06-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://socialprachar.com/scholarship-test</loc>
+    <lastmod>2025-06-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

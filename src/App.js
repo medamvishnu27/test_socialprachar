@@ -21,101 +21,201 @@ import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 // Enhanced Course Meta Data Configuration
 const courseMetaData = {
-  'data-science': {
-    title: 'Top Choice Data Science Course Training Institute in Hyderabad | Social Prachar',
-    description: 'Join SocialPrachar\'s top-rated Data Science course with AI & ML in Hyderabad. Get hands-on training, real-time projects, placement support, and industry certifications. Transform your career with our expert-led program. Enroll now for the best Data Science training in Hyderabad!',
-    keywords: 'data science course hyderabad, AI ML training, python data science, machine learning course, data analytics training, placement guarantee hyderabad',
-    ogTitle: 'Best Data Science Course with AI & ML Training in Hyderabad | Social Prachar',
-    ogDescription: 'Kickstart your Data Science career with SocialPrachar\'s comprehensive course in Hyderabad. Learn AI, ML, Python, and work on real-time projects. Get certified and placed with 100% job assistance. Expert trainers, industry curriculum, and hands-on experience guaranteed.',
-    ogUrl: 'https://socialprachar.com/data-science',
-    ogImage: 'https://socialprachar.com/courses/data-science-course.png',
-    twitterTitle: 'Data Science Course Hyderabad | Learn AI, ML, Python with Placement Guarantee',
-    twitterDescription: 'Transform your career with SocialPrachar\'s Data Science course in Hyderabad. Comprehensive AI & ML training, real-time projects, expert mentors, and guaranteed placement support. Join the #1 Data Science institute in Hyderabad.',
-    author: 'Social Prachar Data Science Team'
-  },
   'full-stack-developer-course': {
-    title: 'Top Choice MERN Full Stack Developer Course Training Institute in Hyderabad | Social Prachar',
-    description: 'Master Full Stack Development with SocialPrachar\'s expert-led MERN stack course in Hyderabad. Learn React, Node.js, MongoDB, Express.js with real-time projects and guaranteed placement. Join the top Full Stack Development training institute in Hyderabad for comprehensive web development skills.',
-    keywords: 'full stack developer course hyderabad, MERN stack training, react js course, node js training, web development course, javascript training hyderabad',
-    ogTitle: 'Full Stack Developer Course in Hyderabad – MERN, Java & Python | Social Prachar',
-    ogDescription: 'Become a skilled Full Stack Developer with SocialPrachar\'s comprehensive course in Hyderabad. Master frontend & backend technologies, build real-world applications, and get placed in top companies. Expert training in MERN, Java, and Python stacks.',
+    title: 'Leading Full Stack Developer Course training institute with Placement | SocialPrachar',
+    description: 'Master Full Stack Development with SocialPrachar\'s expert-led course. Learn MERN, Java, or Python stacks with real-time projects and 100% placement support.',
+    keywords: 'full stack developer course, MERN, Java, Python, placement, web development, SocialPrachar',
+    ogTitle: 'Full Stack Developer Course – MERN, Java & Python Tracks | SocialPrachar',
+    ogDescription: 'Kickstart your career in web development with SocialPrachar\'s Full Stack Developer course. Learn frontend & backend, build real-world apps, and get placed!',
     ogUrl: 'https://socialprachar.com/full-stack-developer-course',
-    ogImage: 'https://socialprachar.com/courses/full-stack-developer-course.png',
-    twitterTitle: 'Full Stack Developer Course Hyderabad | Master MERN, Java, Python with Placement',
-    twitterDescription: 'Launch your web development career with SocialPrachar\'s Full Stack course in Hyderabad. Learn complete web development, build portfolio projects, and get job-ready with our placement guarantee.',
-    author: 'Social Prachar Full Stack Team'
+    ogImage: 'https://socialprachar.com/careerworkshop/Master FS.png',
+    twitterTitle: 'Full Stack Developer Course | Learn MERN, Java, Python',
+    twitterDescription: 'Enroll in SocialPrachar\'s Full Stack course and learn everything from HTML to backend APIs. Build projects and launch your tech career.',
+    author: 'Social Prachar Team'
   },
-  'aws-devops-course': {
-    title: 'Top Choice AWS DevOps Course Training Institute in Hyderabad | Social Prachar',
-    description: 'Master AWS DevOps with SocialPrachar\'s expert-led course in Hyderabad. Learn CI/CD, Docker, Kubernetes, Jenkins, AWS cloud services with real-time projects and placement guarantee. Join the leading DevOps training institute in Hyderabad for comprehensive cloud and automation skills.',
-    keywords: 'aws devops course hyderabad, docker kubernetes training, jenkins ci/cd, cloud computing course, devops certification hyderabad, aws training',
-    ogTitle: 'AWS DevOps Course in Hyderabad – CI/CD, Docker, Kubernetes | Social Prachar',
-    ogDescription: 'Accelerate your cloud career with SocialPrachar\'s AWS DevOps course in Hyderabad. Master automation, deployment pipelines, containerization, and cloud infrastructure. Get hands-on experience with real-time projects and secure high-paying DevOps jobs.',
-    ogUrl: 'https://socialprachar.com/aws-devops-course',
-    ogImage: 'https://socialprachar.com/courses/aws-devops-course.png',
-    twitterTitle: 'AWS DevOps Training Hyderabad | Master CI/CD, Docker, Kubernetes with Job Guarantee',
-    twitterDescription: 'Transform your career with SocialPrachar\'s AWS DevOps course in Hyderabad. Learn cloud automation, deployment strategies, and modern DevOps practices with expert guidance and placement support.',
-    author: 'Social Prachar DevOps Team'
+  'data-science': {
+    title: 'Best Data Science Course Training institute in Hyderabad |Socialprachar',
+    description: 'Join SocialPrachar\'s top-rated Data Science course with AI & ML in India. Get hands-on training, real-time projects, placement support, and certifications. Enroll now!',
+    keywords: 'data science course, AI, ML, Python, placement, SocialPrachar',
+    ogTitle: 'Data Science Course with AI & ML | SocialPrachar',
+    ogDescription: 'Kickstart your career in Data Science with hands-on training in AI, ML, Python, and real-time projects. Get certified and placed with SocialPrachar.',
+    ogUrl: 'https://socialprachar.com/data-science',
+    ogImage: 'https://socialprachar.com/careerworkshop/Master DS.png',
+    twitterTitle: 'Data Science Course | Learn AI, ML, Python with Placement',
+    twitterDescription: 'Learn Data Science with SocialPrachar – a job-ready program with AI & ML, real-time projects, certification, and career support. Enroll today!',
+    author: 'Social Prachar Team'
+  },
+  'mern-stack-course': {
+    title: 'MERN Full Stack Developer Course training institute in Hyderabad',
+    description: 'Master Full Stack Development with SocialPrachar\'s expert-led course in Hyderabad. Learn MERN Java or Python stacks with real-time projects and placement guarentee.',
+    keywords: 'MERN stack, full stack, Java, Python, placement, SocialPrachar',
+    ogTitle: 'Full Stack Developer Course in Hyderabad – MERN, Java & Python Node js | SocialPrachar',
+    ogDescription: 'Kickstart your career in web development with SocialPrachar\'s Full Stack Developer course Hyderabad. Learn frontend & backend, build real-world apps, and get placed!',
+    ogUrl: 'https://socialprachar.com/full-stack-developer-course',
+    ogImage: 'https://socialprachar.com/careerworkshop/MERN.png',
+    twitterTitle: 'Full Stack Developer Course Hyderabad | Learn MERN, Java, Python',
+    twitterDescription: 'Enroll in SocialPrachar\'s Full Stack course and learn everything from HTML to backend APIs. Build projects and launch your tech career.',
+    author: 'Social Prachar Team'
   },
   'artificial-intelligence-course-training-institute-in-hyderabad': {
-    title: 'Top Choice Artificial Intelligence Course Training Institute in Hyderabad | Social Prachar',
-    description: 'Master Artificial Intelligence with SocialPrachar\'s comprehensive AI course in Hyderabad. Learn Machine Learning, Deep Learning, NLP, Computer Vision, Python programming with real-time AI projects and placement guarantee. Join the top AI training institute in Hyderabad.',
-    keywords: 'artificial intelligence course hyderabad, machine learning training, deep learning course, NLP training, computer vision course, AI certification hyderabad',
-    ogTitle: 'Artificial Intelligence Course in Hyderabad – ML, DL, NLP Training | Social Prachar',
-    ogDescription: 'Launch your AI career with SocialPrachar\'s cutting-edge Artificial Intelligence course in Hyderabad. Master ML algorithms, deep learning frameworks, and build intelligent systems. Expert trainers, hands-on projects, and guaranteed job placement.',
+    title: 'Artificial Intelligence Course Training Institute in Hyderabad | SocialPrachar',
+    description: 'Master Artificial Intelligence with SocialPrachar\'s expert-led training in Hyderabad. Learn Machine Learning, Deep Learning, Python, NLP, and AI projects with placement guarantee.',
+    keywords: 'artificial intelligence, AI, ML, Deep Learning, NLP, Python, placement, SocialPrachar',
+    ogTitle: 'Artificial Intelligence Course in Hyderabad – ML, DL, Python | SocialPrachar',
+    ogDescription: 'Accelerate your AI career with SocialPrachar\'s Artificial Intelligence course in Hyderabad. Work on real-time projects and become job-ready in AI & ML.',
     ogUrl: 'https://socialprachar.com/artificial-intelligence-course-training-institute-in-hyderabad',
-    ogImage: 'https://socialprachar.com/courses/artificial-intelligence-course.png',
-    twitterTitle: 'AI Course Training Hyderabad | Master Machine Learning, Deep Learning, NLP',
-    twitterDescription: 'Shape the future with SocialPrachar\'s AI course in Hyderabad. Comprehensive training in ML, DL, and AI technologies with real-world projects and career support.',
-    author: 'Social Prachar AI Team'
+    ogImage: 'https://socialprachar.com/careerworkshop/Master AI.png',
+    twitterTitle: 'AI Course Training in Hyderabad | Learn ML, DL, Python, NLP',
+    twitterDescription: 'Join SocialPrachar\'s AI course in Hyderabad and master Artificial Intelligence tools and techniques through expert-led training and real-time projects.',
+    author: 'Social Prachar Team'
   },
   'digital-marketing-course-training-institute-hyderabad': {
-    title: 'Top Choice Digital Marketing Course Training Institute in Hyderabad | Social Prachar',
-    description: 'Master Digital Marketing with SocialPrachar\'s comprehensive course in Hyderabad. Learn SEO, Google Ads, Facebook Ads, Social Media Marketing, Content Marketing, Email Marketing with real campaigns and placement guarantee. Join the top digital marketing institute in Hyderabad.',
-    keywords: 'digital marketing course hyderabad, SEO training, google ads course, social media marketing, facebook ads training, content marketing course hyderabad',
-    ogTitle: 'Digital Marketing Course in Hyderabad – SEO, Google Ads, Social Media | Social Prachar',
-    ogDescription: 'Become a certified digital marketing expert with SocialPrachar\'s comprehensive course in Hyderabad. Master all aspects of online marketing, work on live campaigns, and get placed in top marketing agencies with our job guarantee.',
+    title: 'Digital Marketing Course Training Institute in Hyderabad | SocialPrachar',
+    description: 'Learn SEO, Google Ads, Social Media, and more with SocialPrachar\'s Digital Marketing Course in Hyderabad. Real-time projects, expert mentors, and placement guarantee.',
+    keywords: 'digital marketing, SEO, Google Ads, Social Media, placement, SocialPrachar',
+    ogTitle: 'Digital Marketing Course in Hyderabad – SEO, Google Ads, Meta Ads | SocialPrachar',
+    ogDescription: 'Become a certified digital marketer with SocialPrachar\'s Digital Marketing course in Hyderabad. Master SEO, PPC, social media, and analytics with placements.',
     ogUrl: 'https://socialprachar.com/digital-marketing-course-training-institute-hyderabad',
-    ogImage: 'https://socialprachar.com/courses/digital-marketing-course.png',
-    twitterTitle: 'Digital Marketing Training Hyderabad | Master SEO, PPC, SMM with Job Guarantee',
-    twitterDescription: 'Build your digital marketing career with SocialPrachar\'s industry-focused course in Hyderabad. Learn from experts, work on real campaigns, and get placed in top companies.',
-    author: 'Social Prachar Digital Marketing Team'
+    ogImage: 'https://socialprachar.com/careerworkshop/Master adv dm.png',
+    twitterTitle: 'Digital Marketing Training in Hyderabad | SEO, PPC, SMM with Placements',
+    twitterDescription: 'Join SocialPrachar\'s Digital Marketing course and build your career with hands-on tools like Google Ads, Meta Ads, and real-time marketing projects.',
+    author: 'Social Prachar Team'
   },
   'python-full-stack-development-course': {
-    title: 'Top Choice Python Full Stack Development Course in Hyderabad | Social Prachar',
-    description: 'Become a Python Full Stack Developer with SocialPrachar\'s comprehensive course in Hyderabad. Learn Django, Flask, React, databases, APIs with real-time projects and placement support. Master both frontend and backend Python development at the leading training institute.',
-    keywords: 'python full stack course hyderabad, django training, flask course, python web development, backend development course, python training hyderabad',
-    ogTitle: 'Python Full Stack Developer Course in Hyderabad – Django, React, APIs | Social Prachar',
-    ogDescription: 'Master Python Full Stack Development with SocialPrachar\'s expert-led course in Hyderabad. Learn web frameworks, databases, frontend integration, and deploy scalable applications. Comprehensive training with job assistance.',
+    title: 'Python Full Stack Development Course in Hyderabad | SocialPrachar',
+    description: 'Become a certified Full Stack Developer with Python at SocialPrachar. Learn frontend, backend, databases, Django, and real-time projects with placement support.',
+    keywords: 'python full stack, Django, frontend, backend, placement, SocialPrachar',
+    ogTitle: 'Python Full Stack Developer Course in Hyderabad – Django, React, SQL | SocialPrachar',
+    ogDescription: 'Master Python Full Stack Development with SocialPrachar. Learn HTML, CSS, JavaScript, Django, databases, and deploy real-world applications with job assistance.',
     ogUrl: 'https://socialprachar.com/python-full-stack-development-course',
-    ogImage: 'https://socialprachar.com/courses/python-full-stack-course.png',
-    twitterTitle: 'Python Full Stack Developer Training Hyderabad | Learn Django, React with Placement',
-    twitterDescription: 'Launch your Python development career with SocialPrachar\'s Full Stack course in Hyderabad. Complete web development training with modern frameworks and job guarantee.',
-    author: 'Social Prachar Python Team'
+    ogImage: 'https://socialprachar.com/careerworkshop/Master FSP.png',
+    twitterTitle: 'Python Full Stack Developer Training in Hyderabad | Learn Django, React',
+    twitterDescription: 'Join SocialPrachar\'s Python Full Stack course in Hyderabad and become job-ready. Learn full stack development with real-time projects and placement support.',
+    author: 'Social Prachar Team'
   },
   'java-full-stack-development-course': {
-    title: 'Top Choice Java Full Stack Development Course in Hyderabad | Social Prachar',
-    description: 'Master Java Full Stack Development with SocialPrachar\'s comprehensive course in Hyderabad. Learn Core Java, Spring Boot, Hibernate, React, Angular, microservices with real-time projects and placement guarantee. Join the top Java training institute in Hyderabad.',
-    keywords: 'java full stack course hyderabad, spring boot training, hibernate course, java web development, microservices training, java certification hyderabad',
-    ogTitle: 'Java Full Stack Developer Course in Hyderabad – Spring Boot, React, Microservices | Social Prachar',
-    ogDescription: 'Become a skilled Java Full Stack Developer with SocialPrachar\'s industry-aligned course in Hyderabad. Master enterprise Java development, modern frameworks, and build scalable applications with expert guidance.',
+    title: 'Java Full Stack Development Course in Hyderabad | SocialPrachar',
+    description: 'Become a Java Full Stack Developer with expert training from SocialPrachar. Learn Core Java, Spring Boot, React, SQL, and build real-time projects with placement support.',
+    keywords: 'java full stack, Spring Boot, React, SQL, placement, SocialPrachar',
+    ogTitle: 'Java Full Stack Developer Course in Hyderabad – Spring Boot, React, SQL | SocialPrachar',
+    ogDescription: 'Master Java Full Stack development with SocialPrachar\'s job-oriented course in Hyderabad. Learn Java, frontend/backend, and work on real-world applications.',
     ogUrl: 'https://socialprachar.com/java-full-stack-development-course',
-    ogImage: 'https://socialprachar.com/courses/java-full-stack-course.png',
-    twitterTitle: 'Java Full Stack Developer Training Hyderabad | Master Spring Boot, React with Job Support',
-    twitterDescription: 'Advance your Java skills with SocialPrachar\'s Full Stack course in Hyderabad. Comprehensive enterprise development training with real projects and career support.',
-    author: 'Social Prachar Java Team'
+    ogImage: 'https://socialprachar.com/careerworkshop/Master FSJ.png',
+    twitterTitle: 'Java Full Stack Developer Training in Hyderabad | Core Java, Spring Boot',
+    twitterDescription: 'Join SocialPrachar\'s Java Full Stack course and gain hands-on experience with Java, frontend frameworks, APIs, and databases. Get placement support.',
+    author: 'Social Prachar Team'
   },
-  'awsdevopscourse': {
-    title: 'Top Choice AWS DevOps Course Training Institute in Hyderabad | Social Prachar',
-    description: 'Master AWS DevOps with SocialPrachar\'s expert-led course in Hyderabad. Learn CI/CD, Docker, Kubernetes, Jenkins, AWS cloud services with real-time projects and placement guarantee. Join the leading DevOps training institute in Hyderabad for comprehensive cloud and automation skills.',
-    keywords: 'aws devops course hyderabad, docker kubernetes training, jenkins ci/cd, cloud computing course, devops certification hyderabad, aws training',
-    ogTitle: 'AWS DevOps Course in Hyderabad – CI/CD, Docker, Kubernetes | Social Prachar',
-    ogDescription: 'Accelerate your cloud career with SocialPrachar\'s AWS DevOps course in Hyderabad. Master automation, deployment pipelines, containerization, and cloud infrastructure. Get hands-on experience with real-time projects and secure high-paying DevOps jobs.',
-    ogUrl: 'https://socialprachar.com/awsdevopscourse',
-    ogImage: 'https://socialprachar.com/courses/aws-devops-course.png',
-    twitterTitle: 'AWS DevOps Training Hyderabad | Master CI/CD, Docker, Kubernetes with Job Guarantee',
-    twitterDescription: 'Transform your career with SocialPrachar\'s AWS DevOps course in Hyderabad. Learn cloud automation, deployment strategies, and modern DevOps practices with expert guidance and placement support.',
-    author: 'Social Prachar DevOps Team'
+  'aws-devops-course': {
+    title: 'AWS DevOps Course Training Institute in Hyderabad | SocialPrachar',
+    description: 'Master AWS DevOps with SocialPrachar\'s expert-led course in Hyderabad. Learn CI/CD, Docker, Kubernetes, AWS tools with real-time projects and placement guarantee.',
+    keywords: 'aws devops, CI/CD, Docker, Kubernetes, AWS, placement, SocialPrachar',
+    ogTitle: 'AWS DevOps Course in Hyderabad – CI/CD, Docker, AWS Tools | SocialPrachar',
+    ogDescription: 'Kickstart your cloud and DevOps career with SocialPrachar\'s AWS DevOps course in Hyderabad. Learn automation, deployment pipelines, and get placed!',
+    ogUrl: 'https://socialprachar.com/aws-devops-course',
+    ogImage: 'https://socialprachar.com/careerworkshop/Master adv devops.png',
+    twitterTitle: 'AWS DevOps Training in Hyderabad | Master CI/CD, Docker, Kubernetes',
+    twitterDescription: 'Enroll in SocialPrachar\'s AWS DevOps course and learn real-time deployment, monitoring, and automation techniques. Launch your cloud career today.',
+    author: 'Social Prachar Team'
+  }
+};
+
+// Page Meta Data for Non-Course Pages (Step 5)
+const pageMetaData = {
+  'courses': {
+    title: '12+Job ready socialprachar courses-Learn Till You Get Placed | social Prachar',
+    description: 'Explore all our job-ready courses and learn till you get placed. Data Science, Full Stack, AWS DevOps, AI, Digital Marketing and more.',
+    keywords: 'courses, job ready, SocialPrachar, Data Science, Full Stack, AWS DevOps, AI, Digital Marketing',
+    ogTitle: '12+Job ready socialprachar courses-Learn Till You Get Placed | social Prachar',
+    ogDescription: 'Explore all our job-ready courses and learn till you get placed. Data Science, Full Stack, AWS DevOps, AI, Digital Marketing and more.',
+    ogUrl: 'https://socialprachar.com/courses',
+    ogImage: 'https://socialprachar.com/homepic.png',
+    twitterTitle: '12+Job ready socialprachar courses-Learn Till You Get Placed | social Prachar',
+    twitterDescription: 'Explore all our job-ready courses and learn till you get placed. Data Science, Full Stack, AWS DevOps, AI, Digital Marketing and more.',
+    author: 'Social Prachar Team'
+  },
+  'success-stories': {
+    title: '16000+ Success Stories Since 2014 | SocialPrachar',
+    description: 'Read real success stories from our students since 2014. See how SocialPrachar has transformed thousands of careers.',
+    keywords: 'success stories, SocialPrachar, student testimonials, placements',
+    ogTitle: '16000+ Success Stories Since 2014 | SocialPrachar',
+    ogDescription: 'Read real success stories from our students since 2014. See how SocialPrachar has transformed thousands of careers.',
+    ogUrl: 'https://socialprachar.com/success-stories',
+    ogImage: 'https://socialprachar.com/homepic.png',
+    twitterTitle: '16000+ Success Stories Since 2014 | SocialPrachar',
+    twitterDescription: 'Read real success stories from our students since 2014. See how SocialPrachar has transformed thousands of careers.',
+    author: 'Social Prachar Team'
+  },
+  'career-counselling': {
+    title: "Achieve Salaries of Up to '12 LPA' with Proven Strategies | social Prcahar",
+    description: 'Join our career workshop and learn proven strategies to achieve high salaries. Get guidance from industry experts.',
+    keywords: 'career workshop, salary, SocialPrachar, industry experts',
+    ogTitle: "Achieve Salaries of Up to '12 LPA' with Proven Strategies | social Prcahar",
+    ogDescription: 'Join our career workshop and learn proven strategies to achieve high salaries. Get guidance from industry experts.',
+    ogUrl: 'https://socialprachar.com/career-counselling',
+    ogImage: 'https://socialprachar.com/homepic.png',
+    twitterTitle: "Achieve Salaries of Up to '12 LPA' with Proven Strategies | social Prcahar",
+    twitterDescription: 'Join our career workshop and learn proven strategies to achieve high salaries. Get guidance from industry experts.',
+    author: 'Social Prachar Team'
+  },
+  'upcoming-batches': {
+    title: 'Upcoming Batches\nLearn Tech Concepts From Industry Leaders | social parchar',
+    description: 'Check out our upcoming batches and learn tech concepts from industry leaders. Flexible schedules and expert trainers.',
+    keywords: 'upcoming batches, SocialPrachar, tech concepts, industry leaders',
+    ogTitle: 'Upcoming Batches\nLearn Tech Concepts From Industry Leaders | social parchar',
+    ogDescription: 'Check out our upcoming batches and learn tech concepts from industry leaders. Flexible schedules and expert trainers.',
+    ogUrl: 'https://socialprachar.com/upcoming-batches',
+    ogImage: 'https://socialprachar.com/homepic.png',
+    twitterTitle: 'Upcoming Batches\nLearn Tech Concepts From Industry Leaders | social parchar',
+    twitterDescription: 'Check out our upcoming batches and learn tech concepts from industry leaders. Flexible schedules and expert trainers.',
+    author: 'Social Prachar Team'
+  },
+  'aboutUs': {
+    title: 'SocialPrachar - 16,000+ Success stories sicne 2014 -About us',
+    description: 'Learn about SocialPrachar, our mission, and our 16,000+ success stories since 2014.',
+    keywords: 'about us, SocialPrachar, success stories, mission',
+    ogTitle: 'SocialPrachar - 16,000+ Success stories sicne 2014 -About us',
+    ogDescription: 'Learn about SocialPrachar, our mission, and our 16,000+ success stories since 2014.',
+    ogUrl: 'https://socialprachar.com/aboutUs',
+    ogImage: 'https://socialprachar.com/homepic.png',
+    twitterTitle: 'SocialPrachar - 16,000+ Success stories sicne 2014 -About us',
+    twitterDescription: 'Learn about SocialPrachar, our mission, and our 16,000+ success stories since 2014.',
+    author: 'Social Prachar Team'
+  },
+  'courseBlog': {
+    title: 'access the different of courses using our course Blog | social parchar',
+    description: 'Access and explore different courses using our course blog. Get insights, tips, and more.',
+    keywords: 'course blog, SocialPrachar, course insights, tips',
+    ogTitle: 'access the different of courses using our course Blog | social parchar',
+    ogDescription: 'Access and explore different courses using our course blog. Get insights, tips, and more.',
+    ogUrl: 'https://socialprachar.com/courseBlog',
+    ogImage: 'https://socialprachar.com/homepic.png',
+    twitterTitle: 'access the different of courses using our course Blog | social parchar',
+    twitterDescription: 'Access and explore different courses using our course blog. Get insights, tips, and more.',
+    author: 'Social Prachar Team'
+  },
+  'codeclash': {
+    title: 'CodeClash 2.0 : A multi-day coding competition for student | social Prachar',
+    description: 'Participate in CodeClash 2.0, a multi-day coding competition for students. Win prizes and showcase your skills.',
+    keywords: 'codeclash, coding competition, SocialPrachar, students, prizes',
+    ogTitle: 'CodeClash 2.0 : A multi-day coding competition for student | social Prachar',
+    ogDescription: 'Participate in CodeClash 2.0, a multi-day coding competition for students. Win prizes and showcase your skills.',
+    ogUrl: 'https://socialprachar.com/codeclash',
+    ogImage: 'https://socialprachar.com/homepic.png',
+    twitterTitle: 'CodeClash 2.0 : A multi-day coding competition for student | social Prachar',
+    twitterDescription: 'Participate in CodeClash 2.0, a multi-day coding competition for students. Win prizes and showcase your skills.',
+    author: 'Social Prachar Team'
+  },
+  'scholarship-test': {
+    title: 'Every week one Top Winner, will get a complete FREE course',
+    description: 'Take the scholarship test and stand a chance to win a complete free course every week at SocialPrachar.',
+    keywords: 'scholarship test, free course, SocialPrachar, winner',
+    ogTitle: 'Every week one Top Winner, will get a complete FREE course',
+    ogDescription: 'Take the scholarship test and stand a chance to win a complete free course every week at SocialPrachar.',
+    ogUrl: 'https://socialprachar.com/scholarship-test',
+    ogImage: 'https://socialprachar.com/homepic.png',
+    twitterTitle: 'Every week one Top Winner, will get a complete FREE course',
+    twitterDescription: 'Take the scholarship test and stand a chance to win a complete free course every week at SocialPrachar.',
+    author: 'Social Prachar Team'
   }
 };
 
@@ -143,6 +243,11 @@ const getMetaData = (pathname) => {
     return courseMetaData[cleanPath];
   }
   
+  // Check for page meta data
+  if (pageMetaData[cleanPath]) {
+    return pageMetaData[cleanPath];
+  }
+  
   // Check for dynamic routes like /course/:courseID
   if (cleanPath.startsWith('course/')) {
     const courseId = cleanPath.split('/')[1];
@@ -153,6 +258,77 @@ const getMetaData = (pathname) => {
   
   // Return default meta data
   return defaultMetaData;
+};
+
+// Function to generate JSON-LD structured data for courses
+const generateCourseStructuredData = (metaData, pathname) => {
+  // Only generate course structured data for course pages
+  const cleanPath = pathname.replace(/^\/+|\/+$/g, '');
+  const isCoursePage = courseMetaData[cleanPath] || 
+                      (cleanPath.startsWith('course/') && courseMetaData[cleanPath.split('/')[1]]);
+  
+  if (!isCoursePage) return null;
+  
+  const courseName = metaData.title.replace(' | SocialPrachar', '').replace('Top Choice ', '');
+  const courseUrl = metaData.ogUrl;
+
+  const courseSchema = {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": courseName,
+    "description": metaData.description,
+    "provider": {
+      "@type": "Organization",
+      "name": "SocialPrachar",
+      "sameAs": "https://socialprachar.com"
+    },
+    "url": courseUrl,
+    "image": metaData.ogImage,
+    "inLanguage": "en-US",
+    "educationalLevel": "Professional",
+    "teaches": [
+      "Data Science",
+      "Full Stack Development", 
+      "AWS DevOps",
+      "Artificial Intelligence",
+      "Digital Marketing",
+      "Python Development",
+      "Java Development"
+    ].filter(tech => metaData.title.toLowerCase().includes(tech.toLowerCase())),
+    "hasCourseInstance": {
+      "@type": "CourseInstance",
+      "courseMode": "online",
+      "inLanguage": "en-US"
+    }
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://socialprachar.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Courses",
+        "item": "https://socialprachar.com/courses"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": courseName,
+        "item": courseUrl
+      }
+    ]
+  };
+
+  // Return an array of structured data objects
+  return [courseSchema, breadcrumbSchema];
 };
 
 const useWindowSize = () => {
@@ -219,6 +395,7 @@ const Popup = ({ setShowPopup }) => {
 // Enhanced Meta Tags Component
 const DynamicMetaTags = ({ location }) => {
   const metaData = getMetaData(location.pathname);
+  const structuredData = generateCourseStructuredData(metaData, location.pathname);
   
   // Update browser-level meta tags for social sharing
   useEffect(() => {
@@ -350,6 +527,13 @@ const DynamicMetaTags = ({ location }) => {
       
       {/* LinkedIn specific */}
       <meta property="og:see_also" content="https://socialprachar.com" />
+      
+      {/* JSON-LD Structured Data for Course Pages */}
+      {structuredData && structuredData.map((data, index) => (
+        <script type="application/ld+json" key={`jsonld-${index}`}>
+          {JSON.stringify(data)}
+        </script>
+      ))}
     </Helmet>
   );
 };
