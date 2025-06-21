@@ -68,7 +68,7 @@ const Home = () => {
                 <div className="col-12 col-sm-12 col-xl-5 align-center">
                   <ArrowButton ArrowText='View All Courses' handleClick={handleClick} />
                 </div>
-                <div className="col-12 col-sm-12 col-xl-6 d-flex justify-content-around">
+                <div className="col-12 col-smgi-12 col-xl-6 d-flex justify-content-around">
                   <div className={`${homeStyle.imgIcons} d-flex`}>
                     <img src={iconPicOne} />
                     <img src={iconPicTwo} className={`${homeStyle.secondIconImg}`} />

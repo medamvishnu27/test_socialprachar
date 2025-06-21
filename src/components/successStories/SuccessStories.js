@@ -24,39 +24,7 @@ import 'aos/dist/aos.css';
 import { collection, db } from '../../firebase.js';
 import { getDocs } from 'firebase/firestore';
 import Achievementcard from './Achievementcard.js';
-
-const hiringImages = [
-    { src: hiring1, alt: 'Hiring 1' },
-    { src: hiring3, alt: 'Hiring 3' },
-    { src: hiring2, alt: 'Hiring 2' },
-];
-
-import React, { useEffect, useRef, useState, Suspense } from 'react';
-import style from './SuccessStories.module.css';
-import GoogleStyle from './googleStyles.module.css';
-import trustPilotStyle from './trustPilot.module.css';
-import Footer from './../footer/footer.js';
-import linkedinLogo from '../../../src/assets/successStories/linkedin.png';
-import justDialLogo from '../../../src/assets/AssetsOfDetailsPage/masterclass/JustDial_Logo.png';
-import googleLogo from '../../../src/assets/successStories/google.png';
-import { linkedinData } from './linkedinData.js';
-import { googleData } from './googleData.js';
-import { trustPilotData } from './trustpilot.js';
-import { ourAluminiReviews } from './ourAluminiReviews.js';
-import { faQuoteLeft, faQuoteRight } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import redline from '../../assets/RedLine.webp';
-import SuccessStoriesForm from './SuccessStoriesForm.js';
-import award_image from '../../assets/successStories/award_image.jpg';
-import higherPackage from '../../assets/subscriptionpage/higherpackage.png';
-import hiring1 from '../../assets/successStories/hiringImage1.jpg';
-import hiring2 from '../../assets/successStories/hiringImage2.jpg';
-import hiring3 from '../../assets/successStories/hiringImage3.jpeg';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import { collection, db } from '../../firebase.js';
-import { getDocs } from 'firebase/firestore';
-import Achievementcard from './Achievementcard.js';
+import { Helmet } from 'react-helmet';
 
 const hiringImages = [
     { src: hiring1, alt: 'Hiring 1' },

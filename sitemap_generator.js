@@ -1,19 +1,65 @@
-const path = require('path');
 const fs = require('fs');
-const SitemapGenerator = require('react-router-sitemap-generator');
+const path = require('path');
 
-// Import your React Router configuration
-const router = require('./src/App').default;
-
-// Set the base URL of your website
 const baseUrl = 'https://socialprachar.com';
 
-// Define the output file path for the sitemap
-const output = path.resolve(__dirname, 'public', 'sitemap.xml');
+const courseSlugs = [
+  'full-stack-developer-course',
+  'data-science',
+  'mern-full-stack-developer-course',
+  'python-full-stack-development-course',
+  'java-full-stack-development-course',
+  'awsdevopscourse',
+  'artificial-intelligence-course-training-institute-in-hyderabad',
+  'generative-ai-course-training-institute-hyderabad',
+  'digital-marketing-course-training-institute-hyderabad',
+  'data-analytics-course-training-hyderabad',
+  'snowflake-training-in-hyderabad',
+  'salesforce-course'
+];
 
-// Create the sitemap
-const generator = new SitemapGenerator(baseUrl, router);
-generator.save(output);
+const majorPages = [
+  '',
+  'courses',
+  'success-stories',
+  'workshop',
+  'upcoming-batches',
+  'aboutUs',
+  'courseBlog',
+  'codeclash',
+  'scholarship-test'
+];
 
-// Confirm completion
-console.log('Sitemap generated successfully at:', output);
+function generateSitemap() {
+  let urls = [];
+
+  // Add major pages
+  majorPages.forEach(page => {
+    urls.push(baseUrl + '/' + page);
+  });
+
+  // Add course pages
+  courseSlugs.forEach(slug => {
+    urls.push(baseUrl + '/' + slug);
+  });
+
+  const sitemapEntries = urls.map(url => {
+    return (
+      '  <url>\n' +
+      '    <loc>' + url + '</loc>\n' +
+      '    <changefreq>weekly</changefreq>\n' +
+      '    <priority>0.8</priority>\n' +
+      '  </url>'
+    );
+  }).join('\n');
+
+  const sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n' +
+    '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
+    sitemapEntries +
+    '\n</urlset>';
+
+  fs.writeFileSync(path.join(__dirname, 'public', 'sitemap.xml'), sitemap, 'utf8');
+  console.log('Sitemap generated at public/sitemap.xml');
+}
+
+generateSitemap();
