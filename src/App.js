@@ -286,6 +286,12 @@ const generateCourseStructuredData = (metaData, pathname) => {
     "image": metaData.ogImage,
     "inLanguage": "en-US",
     "educationalLevel": "Professional",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "INR",
+      "category": "Free"
+    },
     "teaches": [
       "Data Science",
       "Full Stack Development", 
@@ -298,7 +304,8 @@ const generateCourseStructuredData = (metaData, pathname) => {
     "hasCourseInstance": {
       "@type": "CourseInstance",
       "courseMode": "online",
-      "inLanguage": "en-US"
+      "inLanguage": "en-US",
+      "courseWorkload": "P16W" // Placeholder for 16 weeks, can be adjusted
     }
   };
 
