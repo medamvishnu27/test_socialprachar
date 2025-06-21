@@ -42,7 +42,7 @@ const CourseDetails = () => {
               <Certificate />
               <CourseAccordion /> 
               <Banner />
-              <Testmonials />
+              // <Testmonials />
           </Suspense>
         </>
     );
