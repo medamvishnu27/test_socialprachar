@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Camera, Calendar, Tag, Clock, CheckCircle, User, FileText, Upload, X, Eye, Save, Trash2, Edit, ExternalLink, Search } from 'lucide-react';
+import { Camera, Calendar, Tag, Clock, CheckCircle, User, FileText, Upload, X, Save, Trash2, Edit, Search } from 'lucide-react';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import styles from './CourseBlogDashboard.module.css';
-import { addDoc, collection, getDocs, deleteDoc, doc, query, orderBy } from 'firebase/firestore';
+import { addDoc, collection, getDocs, deleteDoc, doc, query, orderBy, updateDoc } from 'firebase/firestore';
 import { serverTimestamp } from 'firebase/firestore';
 import { ref, uploadBytesResumable, getDownloadURL, deleteObject } from 'firebase/storage';
+import { getAuth } from 'firebase/auth';
 import { db, storage } from '../../firebase';
 
 const categories = [
@@ -22,7 +23,8 @@ const CourseBlogDashboard = () => {
     readTime: '', 
     content: '',
     author: '',
-    tags: ''
+    tags: '',
+    createdAt: null // Initialize createdAt
   });
 
   const [imageFile, setImageFile] = useState(null);
@@ -37,12 +39,9 @@ const CourseBlogDashboard = () => {
   const [loading, setLoading] = useState(false);
   const [deleteConfirm, setDeleteConfirm] = useState(null);
   const [searchTerm, setSearchTerm] = useState('');
+  const [isEditing, setIsEditing] = useState(false);
+  const [editingArticleId, setEditingArticleId] = useState(null);
 
-  // New state for popup modal
-  const [popupOpen, setPopupOpen] = useState(false);
-  const [selectedArticle, setSelectedArticle] = useState(null);
-
-  // Fetch articles on component mount
   useEffect(() => {
     fetchArticles();
   }, []);
@@ -72,12 +71,10 @@ const CourseBlogDashboard = () => {
 
   const handleContentChange = (value) => {
     setFormData(prev => ({ ...prev, content: value }));
-    // Calculate word count
     const text = value.replace(/<[^>]*>/g, '').trim();
     const words = text.split(/\s+/).filter(word => word.length > 0).length;
     setWordCount(words);
     
-    // Auto-calculate read time
     const readTime = Math.ceil(words / 200);
     if (readTime > 0) {
       setFormData(prev => ({ ...prev, readTime: `${readTime} min read` }));
@@ -87,13 +84,11 @@ const CourseBlogDashboard = () => {
   const handleImageChange = (e) => {
     const file = e.target.files[0];
     if (file) {
-      // Validate file size (5MB limit)
       if (file.size > 5 * 1024 * 1024) {
         setError('Image size should be less than 5MB');
         return;
       }
       
-      // Validate file type
       if (!file.type.startsWith('image/')) {
         setError('Please select a valid image file');
         return;
@@ -108,7 +103,6 @@ const CourseBlogDashboard = () => {
   const removeImage = () => {
     setImageFile(null);
     setImagePreview('');
-    // Reset file input
     const fileInput = document.querySelector('input[type="file"]');
     if (fileInput) fileInput.value = '';
   };
@@ -122,13 +116,36 @@ const CourseBlogDashboard = () => {
       readTime: '', 
       content: '',
       author: '',
-      tags: ''
+      tags: '',
+      createdAt: null
     });
     setImageFile(null);
     setImagePreview('');
     setWordCount(0);
     setError('');
     setSubmitSuccess(false);
+    setIsEditing(false);
+    setEditingArticleId(null);
+  };
+
+  const handleEditArticle = (article) => {
+    setIsEditing(true);
+    setEditingArticleId(article.id);
+    setFormData({
+      title: article.title || '',
+      excerpt: article.excerpt || '',
+      date: article.date || new Date().toISOString().split('T')[0],
+      category: article.category || '',
+      readTime: article.readTime || '',
+      content: article.content || '',
+      author: article.author || '',
+      tags: article.tags ? article.tags.join(', ') : '',
+      createdAt: article.createdAt || null,
+      imageUrl: article.imageUrl || ''
+    });
+    setImagePreview(article.imageUrl || '');
+    setWordCount(article.wordCount || 0);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const handleSubmit = async (e) => {
@@ -147,41 +164,69 @@ const CourseBlogDashboard = () => {
         throw new Error('Content is required');
       }
 
-      let imageUrl = '';
+      const auth = getAuth();
+      if (!auth.currentUser && imageFile && !isEditing) {
+        throw new Error('You must be logged in to upload images');
+      }
+
+      let imageUrl = isEditing ? formData.imageUrl || '' : '';
       if (imageFile) {
-        const storageRef = ref(storage, `blog-images/${Date.now()}_${imageFile.name}`);
-        const uploadTask = uploadBytesResumable(storageRef, imageFile);
+        const safeFileName = imageFile.name.replace(/[^a-zA-Z0-9.-]/g, '_');
+        const storageRef = ref(storage, `blog-images/${Date.now()}_${safeFileName}`);
+        console.log('Uploading to:', storageRef.toString());
         
-        // Monitor upload progress
-        uploadTask.on('state_changed', (snapshot) => {
-          const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-          setUploadProgress(progress);
-        });
-        
-        await uploadTask;
-        imageUrl = await getDownloadURL(storageRef);
+        try {
+          const uploadTask = uploadBytesResumable(storageRef, imageFile);
+          
+          uploadTask.on('state_changed', 
+            (snapshot) => {
+              const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+              setUploadProgress(progress);
+            },
+            (error) => {
+              console.error('Upload error:', error.code, error.message);
+              throw new Error(`Image upload failed: ${error.message}`);
+            }
+          );
+          
+          await uploadTask;
+          imageUrl = await getDownloadURL(storageRef);
+          console.log('Image uploaded, URL:', imageUrl);
+        } catch (uploadError) {
+          console.error('Upload failed:', uploadError);
+          throw uploadError;
+        }
       }
 
       const payload = { 
         ...formData, 
         imageUrl, 
-        createdAt: serverTimestamp(),
+        updatedAt: serverTimestamp(),
         status: isDraft ? 'draft' : 'published',
         wordCount: wordCount,
         tags: formData.tags.split(',').map(tag => tag.trim()).filter(tag => tag.length > 0)
       };
+
+      // Remove createdAt if it's null or undefined to avoid invalid values
+      if (!payload.createdAt) {
+        delete payload.createdAt;
+      }
+
+      if (isEditing) {
+        await updateDoc(doc(db, 'blog', editingArticleId), payload);
+      } else {
+        payload.createdAt = serverTimestamp();
+        await addDoc(collection(db, 'blog'), payload);
+      }
       
-      await addDoc(collection(db, 'blog'), payload);
       setSubmitSuccess(true);
       resetForm();
-      
-      // Refresh articles list
       fetchArticles();
       
-      // Auto-hide success message after 5 seconds
       setTimeout(() => setSubmitSuccess(false), 5000);
       
     } catch (err) {
+      console.error('Error in handleSubmit:', err.code, err.message);
       setError(err.message || 'Failed to submit blog post');
     } finally {
       setIsSubmitting(false);
@@ -202,25 +247,19 @@ const CourseBlogDashboard = () => {
 
   const handleDeleteArticle = async (articleId, imageUrl) => {
     try {
-      // Delete the document from Firestore
       await deleteDoc(doc(db, 'blog', articleId));
       
-      // Delete image from storage if exists
       if (imageUrl) {
         try {
           const imageRef = ref(storage, imageUrl);
           await deleteObject(imageRef);
         } catch (imageError) {
           console.log('Error deleting image:', imageError);
-          // Continue even if image deletion fails
         }
       }
       
-      // Refresh articles list
       fetchArticles();
       setDeleteConfirm(null);
-      
-      // Show success message
       setError('');
       setSubmitSuccess(true);
       setTimeout(() => setSubmitSuccess(false), 3000);
@@ -255,13 +294,11 @@ const CourseBlogDashboard = () => {
     return plainText.length > maxLength ? plainText.substring(0, maxLength) + '...' : plainText;
   };
 
-  // Filter articles based on search term
   const filteredArticles = articles.filter(article =>
     article.title?.toLowerCase().includes(searchTerm.toLowerCase()) ||
     article.author?.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  // Enhanced Quill modules with more formatting options
   const quillModules = {
     toolbar: [
       [{ header: [1, 2, 3, 4, 5, 6, false] }],
@@ -298,10 +335,10 @@ const CourseBlogDashboard = () => {
         <div className={styles.headerContent}>
           <h2 className={styles.title}>
             <FileText className={styles.titleIcon} />
-            Create Blog Post
+            {isEditing ? 'Edit Blog Post' : 'Create Blog Post'}
           </h2>
           <p className={styles.subtitle}>
-            Share your knowledge and insights with the community
+            {isEditing ? 'Update your article content' : 'Share your knowledge and insights with the community'}
           </p>
         </div>
       </div>
@@ -311,7 +348,7 @@ const CourseBlogDashboard = () => {
           <CheckCircle size={20} />
           <span>
             {deleteConfirm ? 'Article deleted successfully!' : 
-             `Blog post ${isDraft ? 'saved as draft' : 'published'} successfully!`}
+             `Blog post ${isEditing ? 'updated' : isDraft ? 'saved as draft' : 'published'} successfully!`}
           </span>
           <button 
             onClick={() => setSubmitSuccess(false)}
@@ -335,7 +372,6 @@ const CourseBlogDashboard = () => {
       )}
 
       <form onSubmit={handleSubmit} className={styles.form}>
-        {/* Title Section */}
         <div className={styles.section}>
           <label className={styles.label}>
             <FileText size={16} />
@@ -352,10 +388,9 @@ const CourseBlogDashboard = () => {
           />
         </div>
 
-        {/* Excerpt Section */}
         <div className={styles.section}>
           <label className={styles.label}>
-            <Eye size={16} />
+            {/* <Eye size={16} /> */}
             Excerpt (Preview Text)
           </label>
           <textarea 
@@ -371,7 +406,6 @@ const CourseBlogDashboard = () => {
           </small>
         </div>
 
-        {/* Metadata Row */}
         <div className={styles.metadataRow}>
           <div className={styles.metadataItem}>
             <label className={styles.label}>
@@ -422,7 +456,6 @@ const CourseBlogDashboard = () => {
           </div>
         </div>
 
-        {/* Author and Tags Row */}
         <div className={styles.metadataRow}>
           <div className={styles.metadataItem}>
             <label className={styles.label}>
@@ -455,7 +488,6 @@ const CourseBlogDashboard = () => {
           </div>
         </div>
 
-        {/* Image Upload Section */}
         <div className={styles.section}>
           <label className={styles.label}>
             <Camera size={16} />
@@ -503,7 +535,6 @@ const CourseBlogDashboard = () => {
           )}
         </div>
 
-        {/* Content Editor Section */}
         <div className={styles.section}>
           <label className={styles.label}>
             <FileText size={16} />
@@ -530,7 +561,6 @@ const CourseBlogDashboard = () => {
           </div>
         </div>
 
-        {/* Action Buttons */}
         <div className={styles.actions}>
           <div className={styles.leftActions}>
             <button 
@@ -540,7 +570,7 @@ const CourseBlogDashboard = () => {
               disabled={isSubmitting}
             >
               <X size={16} />
-              Reset Form
+              {isEditing ? 'Cancel Edit' : 'Reset Form'}
             </button>
             
             <button 
@@ -563,12 +593,12 @@ const CourseBlogDashboard = () => {
               {isSubmitting ? (
                 <>
                   <div className={styles.spinner}></div>
-                  {isDraft ? 'Saving Draft...' : 'Publishing...'}
+                  {isDraft ? 'Saving Draft...' : isEditing ? 'Updating...' : 'Publishing...'}
                 </>
               ) : (
                 <>
                   <CheckCircle size={16} />
-                  Publish Article
+                  {isEditing ? 'Update Article' : 'Publish Article'}
                 </>
               )}
             </button>
@@ -576,7 +606,7 @@ const CourseBlogDashboard = () => {
         </div>
       </form>
 
-     <div style={{
+      <div style={{
         backgroundColor: '#ffffff',
         borderRadius: '12px',
         boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
@@ -586,7 +616,6 @@ const CourseBlogDashboard = () => {
         marginLeft: 'auto',
         marginRight: 'auto'
       }}>
-        {/* Header with Search */}
         <div style={{
           padding: '1.5rem',
           borderBottom: '1px solid #e5e7eb',
@@ -612,7 +641,6 @@ const CourseBlogDashboard = () => {
             </h3>
           </div>
           
-          {/* Search Bar */}
           <div style={{ position: 'relative', maxWidth: '400px', width: '100%' }}>
             <Search 
               size={18} 
@@ -643,7 +671,6 @@ const CourseBlogDashboard = () => {
           </div>
         </div>
 
-        {/* Table Content */}
         {loading ? (
           <div style={{
             display: 'flex',
@@ -801,11 +828,8 @@ const CourseBlogDashboard = () => {
                         justifyContent: 'center',
                         gap: '8px'
                       }}>
-                      <button
-                          onClick={() => {
-                            setSelectedArticle(article);
-                            setPopupOpen(true);
-                          }}
+                        <button
+                          onClick={() => handleEditArticle(article)}
                           style={{
                             padding: '6px 8px',
                             backgroundColor: '#3b82f6',
@@ -826,7 +850,7 @@ const CourseBlogDashboard = () => {
                             e.currentTarget.style.backgroundColor = '#3b82f6';
                             e.currentTarget.style.transform = 'scale(1)';
                           }}
-                          title="View Article"
+                          title="Edit Article"
                         >
                           <Edit size={14} />
                         </button>
@@ -869,53 +893,6 @@ const CourseBlogDashboard = () => {
           </div>
         )}
       </div>
-
-      {/* Popup Modal for Article View */}
-      {popupOpen && selectedArticle && (
-        <div className={styles.popupOverlay} onClick={() => setPopupOpen(false)} style={{
-          position: 'fixed',
-          top: 0, left: 0, right: 0, bottom: 0,
-          backgroundColor: 'rgba(0,0,0,0.5)',
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          zIndex: 1000,
-        }}>
-          <div className={styles.popupContent} onClick={e => e.stopPropagation()} style={{
-            backgroundColor: '#fff',
-            borderRadius: '12px',
-            maxWidth: '600px',
-            width: '90%',
-            maxHeight: '80vh',
-            overflowY: 'auto',
-            padding: '1.5rem',
-            boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
-            position: 'relative',
-          }}>
-            <button onClick={() => setPopupOpen(false)} style={{
-              position: 'absolute',
-              top: '10px',
-              right: '10px',
-              background: 'transparent',
-              border: 'none',
-              cursor: 'pointer',
-              fontSize: '1.5rem',
-              fontWeight: 'bold',
-              color: '#374151',
-            }} title="Close">
-              &times;
-            </button>
-            <h2 style={{ marginBottom: '1rem', color: '#1f2937' }}>{selectedArticle.title}</h2>
-            <p style={{ marginBottom: '1rem', color: '#6b7280' }}>
-              <strong>Author:</strong> {selectedArticle.author || 'Anonymous'}
-            </p>
-            <p style={{ marginBottom: '1rem', color: '#6b7280' }}>
-              <strong>Published:</strong> {formatDate(selectedArticle.createdAt)}
-            </p>
-            <div dangerouslySetInnerHTML={{ __html: selectedArticle.content }} style={{ color: '#374151', lineHeight: '1.6' }} />
-          </div>
-        </div>
-      )}
     </div>
   );
 };
