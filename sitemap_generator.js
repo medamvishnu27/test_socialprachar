@@ -1,65 +1,79 @@
 const fs = require('fs');
 const path = require('path');
 
-const baseUrl = 'https://socialprachar.com';
+// Assuming your App.js is in src/
+const appJsPath = path.resolve(__dirname, 'src/App.js');
+const appJsContent = fs.readFileSync(appJsPath, 'utf8');
 
-const courseSlugs = [
-  'full-stack-developer-course',
-  'data-science',
-  'mern-full-stack-developer-course',
-  'python-full-stack-development-course',
-  'java-full-stack-development-course',
-  'awsdevopscourse',
-  'artificial-intelligence-course-training-institute-in-hyderabad',
-  'generative-ai-course-training-institute-hyderabad',
-  'digital-marketing-course-training-institute-hyderabad',
-  'data-analytics-course-training-hyderabad',
-  'snowflake-training-in-hyderabad',
-  'salesforce-course'
-];
-
-const majorPages = [
-  '',
-  'courses',
-  'success-stories',
-  'workshop',
-  'upcoming-batches',
-  'aboutUs',
-  'courseBlog',
-  'codeclash',
-  'scholarship-test'
-];
-
-function generateSitemap() {
-  let urls = [];
-
-  // Add major pages
-  majorPages.forEach(page => {
-    urls.push(baseUrl + '/' + page);
-  });
-
-  // Add course pages
-  courseSlugs.forEach(slug => {
-    urls.push(baseUrl + '/' + slug);
-  });
-
-  const sitemapEntries = urls.map(url => {
-    return (
-      '  <url>\n' +
-      '    <loc>' + url + '</loc>\n' +
-      '    <changefreq>weekly</changefreq>\n' +
-      '    <priority>0.8</priority>\n' +
-      '  </url>'
-    );
-  }).join('\n');
-
-  const sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n' +
-    '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
-    sitemapEntries +
-    '\n</urlset>';
-
-  fs.writeFileSync(path.join(__dirname, 'public', 'sitemap.xml'), sitemap, 'utf8');
-  console.log('Sitemap generated at public/sitemap.xml');
+// A function to extract a JavaScript object from a string
+function extractObject(content, objectName) {
+  const regex = new RegExp(`const ${objectName} = ({[\\s\\S]*?});`, 'm');
+  const match = content.match(regex);
+  if (match && match[1]) {
+    try {
+      // Use eval in a sandboxed way to parse the object.
+      // NOTE: Be cautious with eval. Here it's slightly safer as we control the source file.
+      const obj = (new Function(`return ${match[1]}`))();
+      return obj;
+    } catch (e) {
+      console.error(`Error parsing ${objectName}:`, e);
+      return null;
+    }
+  }
+  return null;
 }
 
-generateSitemap();
+const courseMetaData = extractObject(appJsContent, 'courseMetaData');
+const pageMetaData = extractObject(appJsContent, 'pageMetaData');
+
+if (!courseMetaData || !pageMetaData) {
+  console.error('Could not extract meta data. Sitemap not generated.');
+  process.exit(1);
+}
+
+const baseUrl = 'https://socialprachar.com';
+
+// Get course URLs from the keys of the courseMetaData object
+const courseUrls = Object.keys(courseMetaData).map(slug => `${baseUrl}/${slug}`);
+
+// Get page URLs from the keys of the pageMetaData object
+const pageUrls = Object.keys(pageMetaData).map(slug => `${baseUrl}/${slug}`);
+
+// Define other static URLs
+const staticUrls = [
+  baseUrl + '/',
+  baseUrl + '/thank-you',
+  baseUrl + '/privacy-policy',
+  baseUrl + '/career-roadmaps',
+  baseUrl + '/socialhire'
+];
+
+// Combine all URLs and remove duplicates
+const allUrls = [...new Set([...staticUrls, ...courseUrls, ...pageUrls])];
+
+const generateSitemapXml = (urls) => {
+  let xml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`;
+
+  urls.forEach(url => {
+    xml += `
+  <url>
+    <loc>${url}</loc>
+    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>`;
+  });
+
+  xml += `
+</urlset>`;
+  return xml;
+};
+
+const sitemapXml = generateSitemapXml(allUrls);
+
+fs.writeFileSync(path.resolve(__dirname, 'public/sitemap.xml'), sitemapXml);
+
+console.log('✅ Sitemap generated successfully!');
+console.log(`✅ Found ${allUrls.length} URLs.`);
+console.log('✅ Sitemap written to public/sitemap.xml');
