@@ -253,11 +253,11 @@
 }
 @media (max-width: 1250px) {
   .spLogo {
-    width: 220px;
+    width: 150px !important;
   }
   .containerfluidForNav {
     padding-left: 5px !important;
-    padding-right: 10px !important;
+    padding-right: 5px !important;
   }
 }
 @media (max-width: 340px) {
@@ -346,3 +346,22 @@
     padding: 10px; /* Add some padding for better touch targets */
   }
 }
+@media (min-width: 992px) and (max-width: 1250px) {
+  .customDropdown {
+    position: absolute !important;
+    min-width: 200px;
+    background: rgba(255, 255, 255, 0.362);
+    z-index: 9999;
+    top: 100%;
+    right: 0;
+    left: auto;
+    transform: translateX(-3%); /* Adjust left-right alignment */
+  }
+  .navBarSticky{
+    font-size: 15px;
+  }
+}
+
+
+
+
