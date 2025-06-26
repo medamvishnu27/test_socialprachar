@@ -17,24 +17,7 @@ import { faGraduationCap, faUsers, faHandshake, faMedal } from "@fortawesome/fre
 const NavBar = () => {
   const location = useLocation();
 
-  const categoryArraryOne = [
-    { courseImg: course6, courseName: `Web Development`, NoOFCourses: "5+ courses" },
-    { courseImg: course2, courseName: "Analytics", NoOFCourses: "4+ courses" },
-    { courseImg: course3, courseName: "Marketing", NoOFCourses: "3+ courses" },
-  ];
-  const categoryArraryTwo = [
-    // {
-    //   courseImg: course7,
-    //   courseName: "HR Analytics",
-    //   NoOFCourses: "1+ courses",
-    // },
-    // { courseImg: course5, courseName: "Accounting", NoOFCourses: "3+ courses" },
-    // {courseImg:course4,
-    //   courseName:'Photography',
-    //   NoOFCourses:'0 courses'
-    // },
-    // { courseImg: course8, courseName: "Finance", NoOFCourses: "2+ courses" },
-  ];
+
 
   const dropDownValues = [
     { label: "Data Science + AI", path: "/data-science" },
@@ -141,59 +124,7 @@ const NavBar = () => {
             )}
 
 
-            <div
-              className={`${navBarStyle.hiddenMobileSm} ${navBarStyle.categorySection} `}
-            >
-              <div className={`${navBarStyle.categoryMenu}`}>
-                <div className="d-flex">
-                  <ul>
-                    {categoryArraryOne.map((category, i) => (
-                      <li key={i}>
-                        <button
-                          href="#"
-                          className="d-flex"
-                          onClick={() =>
-                            handleCategoryClick(category.courseName)
-                          }
-                        >
-                          <img src={category.courseImg} />
-                          <div>
-                            <p style={{ whiteSpace: 'pre-wrap' }}>{category.courseName}</p>
-                            <br />
-                            <p className={`${navBarStyle.textTwo}`}>
-                              {category.NoOFCourses}
-                            </p>
-                          </div>
-                        </button>
-                      </li>
-                    ))}
-                  </ul>
 
-                  <ul>
-                    {categoryArraryTwo.map((category, i) => (
-                      <li key={i}>
-                        <button
-                          href="#"
-                          className="d-flex"
-                          onClick={() =>
-                            handleCategoryClick(category.courseName)
-                          }
-                        >
-                          <img src={category.courseImg} />
-                          <div>
-                            <p>{category.courseName}</p>
-                            <br />
-                            <p className={`${navBarStyle.textTwo}`}>
-                              {category.NoOFCourses}
-                            </p>
-                          </div>
-                        </button>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </div>
           </div>
 
           {/* brand name and category code start */}
@@ -281,7 +212,8 @@ const NavBar = () => {
                   >
                     Subscription
                   </NavLink>
-                  <div className={`dropdown-menu ${dropdowns.dropdown2 ? "show" : ""}`}>
+                  <div className={`dropdown-menu ${dropdowns.dropdown2 ? "show" : ""} ${navBarStyle.customDropdown}`}>
+
                     <NavLink
                       to="/subscription/working-professionals" // ✅ Absolute Path
                       className="dropdown-item"
@@ -314,7 +246,8 @@ const NavBar = () => {
                   >
                     More
                   </NavLink>
-                  <div className={`dropdown-menu ${dropdowns.dropdown1 ? "show" : ""}`}>
+                  <div className={`dropdown-menu ${dropdowns.dropdown1 ? "show" : ""} ${navBarStyle.customDropdown}`}>
+
                     <NavLink
                       to="/aboutUs"
                       className="dropdown-item"
@@ -402,31 +335,7 @@ const NavBar = () => {
                   </div>
                 </li>
 
-                <li>
-                  <div>
-                    <a
-                      href="tel:+918019479419"
-                      className={`${navBarStyle.buttonStyle} d-flex align-items-center justify-content-center`}
-                      role="button"
-                    >
-                      <FontAwesomeIcon icon={faPhone} className="me-2" />
-                      Call
-                    </a>
-                  </div>
-                </li>
-                <li>
-                  <a
-                    href="https://wa.me/918019479419?text=Hello%2C%20I%20would%20like%20to%20connect%20with%20you!"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`${navBarStyle.buttonStyle} d-flex align-items-center justify-content-center`}
-                    role="button"
-                    style={{ color: 'green' }}
-                  >
-                    <FontAwesomeIcon icon={faWhatsapp} className="me-2" style={{ color: 'green' }} />
-                    WhatsApp
-                  </a>
-                </li>
+
 
               </ul>
             </div>
